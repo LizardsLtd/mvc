@@ -1,10 +1,10 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.ModelBinding;
-using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
-using Lizards.MvcToolkit.ModelBinder;
-
-namespace Lizards.MvcToolkit.Configuration
+﻿namespace Lizards.MvcToolkit.Core.Shards
 {
+    using Lizards.MvcToolkit.Core.ModelBinder;
+    using Microsoft.AspNetCore.Mvc;
+    using Microsoft.AspNetCore.Mvc.ModelBinding;
+    using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
+
     public static class ModelBinderExtension
     {
         public static Configurator<MvcOptions> AddModelBinderProvider<TBindedType, TModelBinder>(

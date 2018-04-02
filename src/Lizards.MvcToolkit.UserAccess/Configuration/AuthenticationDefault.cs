@@ -10,8 +10,8 @@ using Microsoft.AspNetCore.Mvc.Authorization;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using Picums.Data.CQRS;
-using Lizards.MvcToolkit.Configuration;
-using Lizards.MvcToolkit.Configuration.Defaults;
+using Lizards.MvcToolkit.Core.Shards;
+using Lizards.MvcToolkit.Core.Shards.Defaults;
 using Lizards.MvcToolkit.UserAccess.Claims;
 using Lizards.MvcToolkit.UserAccess.Stores;
 

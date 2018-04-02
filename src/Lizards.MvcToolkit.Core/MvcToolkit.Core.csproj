@@ -39,33 +39,25 @@
     <None Remove="View\**" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Remove="Configuration\AspConfigurator.cs" />
-    <Compile Remove="Configuration\AspNetStartup.cs" />
-    <Compile Remove="Configuration\Configurator.cs" />
-    <Compile Remove="Configuration\Defaults\BasicDefault.cs" />
-    <Compile Remove="Configuration\Defaults\DependencyInjectionDefault.cs" />
-    <Compile Remove="Configuration\Defaults\DevelopmentSetup.cs" />
-    <Compile Remove="Configuration\Defaults\FeaturesDefaults.cs" />
-    <Compile Remove="Configuration\Defaults\IDefault.cs" />
-    <Compile Remove="Configuration\Defaults\MiddlewareDefault.cs" />
-    <Compile Remove="Configuration\Defaults\ModelBinderDefault.cs" />
-    <Compile Remove="Configuration\Defaults\OptionsDefault.cs" />
-    <Compile Remove="Configuration\Defaults\RouteDefault.cs" />
-    <Compile Remove="Configuration\Defaults\UseStaticFiles.cs" />
-    <Compile Remove="Configuration\ModelBinderExtension.cs" />
-    <Compile Remove="Configuration\MvcConfig.cs" />
-    <Compile Remove="Configuration\MvcConventionExtension.cs" />
-    <Compile Remove="Configuration\MvcFilterExtension.cs" />
-    <Compile Remove="Configuration\MvcModelMetadataExtension.cs" />
-    <Compile Remove="Configuration\RazorConfig.cs" />
-    <Compile Remove="Configuration\ServicesConfigurator.cs" />
-    <Compile Remove="Configuration\StartupConfigurations.cs" />
+    <Compile Remove="Shards\Defaults\BasicDefault.cs" />
+    <Compile Remove="Shards\Defaults\DependencyInjectionDefault.cs" />
+    <Compile Remove="Shards\Defaults\DevelopmentSetup.cs" />
+    <Compile Remove="Shards\Defaults\FeaturesDefaults.cs" />
+    <Compile Remove="Shards\Defaults\IDefault.cs" />
+    <Compile Remove="Shards\Defaults\MiddlewareDefault.cs" />
+    <Compile Remove="Shards\Defaults\ModelBinderDefault.cs" />
+    <Compile Remove="Shards\Defaults\OptionsDefault.cs" />
+    <Compile Remove="Shards\Defaults\RouteDefault.cs" />
+    <Compile Remove="Shards\Defaults\UseStaticFiles.cs" />
     <Compile Remove="CultureInfoExtension.cs" />
     <Compile Remove="IdentityErrorExtension.cs" />
     <Compile Remove="IServiceProviderExtension.cs" />
   </ItemGroup>
   <ItemGroup>
     <AdditionalFiles Include="..\..\..\stylecop.json" Link="stylecop.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ModelBinder\ModelBinderProvider.cs" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Lizards.Maybe" Version="0.3.3" />
@@ -83,7 +75,6 @@
     <PackageReference Include="NLog" Version="4.5.0-rc06" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Configuration\" />
-    <Folder Include="Configuration\Defaults\" />
+    <Folder Include="Shards\Defaults\" />
   </ItemGroup>
 </Project>

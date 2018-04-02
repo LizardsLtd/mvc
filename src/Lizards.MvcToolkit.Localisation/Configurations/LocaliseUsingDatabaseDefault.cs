@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using Microsoft.Extensions.DependencyInjection;
 using Picums.Data.CQRS;
-using Lizards.MvcToolkit.Configuration.Defaults;
+using Lizards.MvcToolkit.Core.Shards.Defaults;
 using Lizards.MvcToolkit.Localisation.DataStorage;
 
 namespace Lizards.MvcToolkit.Localisation.Configuration.Defaults

@@ -1,11 +1,11 @@
 ﻿using System;
+using Lizards.MvcToolkit.Core.Shards.Defaults;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Lizards.MvcToolkit.Configuration.Defaults;
 
-namespace Lizards.MvcToolkit.Configuration
+namespace Lizards.MvcToolkit.Core.Shards
 {
     public abstract class AspNetStartup
     {
@@ -50,10 +50,10 @@ namespace Lizards.MvcToolkit.Configuration
         }
 
         public void ApplyDefault<TDefault>(params object[] arguments)
-                where TDefault : IDefault, new()
+                where TDefault : IShard, new()
             => this.ApplyDefault(new TDefault(), arguments);
 
-        public void ApplyDefault(IDefault @default, params object[] arguments)
+        public void ApplyDefault(IShard @default, params object[] arguments)
         {
             this.configuration.Apply(@default, arguments);
         }

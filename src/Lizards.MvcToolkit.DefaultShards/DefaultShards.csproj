@@ -6,4 +6,9 @@
     <RootNamespace>Lizards.MvcToolkit.DefaultShards</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Lizards.MvcToolkit.Core\MvcToolkit.Core.csproj" />
+    <ProjectReference Include="..\Lizards.MvcToolkit.FeatureSlices\FeatureSlices.csproj" />
+  </ItemGroup>
+
 </Project>

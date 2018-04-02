@@ -2,9 +2,8 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Routing;
 using Microsoft.Extensions.DependencyInjection;
-using Lizards.MvcToolkit.Navigation;
 
-namespace Lizards.MvcToolkit.Configuration
+namespace Lizards.MvcToolkit.Core.Shards
 {
     public sealed class MvcConfig
     {
@@ -24,7 +23,7 @@ namespace Lizards.MvcToolkit.Configuration
                 .AddMvc(CreateMvcOptions)
                 .AddViewLocalization();
 
-            services.AddSingleton(AddNavigationItems(services, mvcBuilder));
+            //services.AddSingleton(AddNavigationItems(services, mvcBuilder));
         }
 
         internal void Use(IApplicationBuilder app)
@@ -35,12 +34,12 @@ namespace Lizards.MvcToolkit.Configuration
         private void CreateMvcOptions(MvcOptions options)
             => this.Options.Execute(options);
 
-        private NavigationItems AddNavigationItems(IServiceCollection services, IMvcBuilder mvcBuilder)
-        {
-            var navigationItems = new NavigationItems();
+        //private NavigationItems AddNavigationItems(IServiceCollection services, IMvcBuilder mvcBuilder)
+        //{
+        //    var navigationItems = new NavigationItems();
 
-            this.Options.AddApplicationConvention(new NavigationCreationConvention(navigationItems));
-            return navigationItems;
-        }
+        //    this.Options.AddApplicationConvention(new NavigationCreationConvention(navigationItems));
+        //    return navigationItems;
+        //}
     }
 }

@@ -22,6 +22,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Configurations\**" />
+    <EmbeddedResource Remove="Configurations\**" />
+    <None Remove="Configurations\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Compile Remove="ReloadTranslationsCommand.cs" />
     <Compile Remove="ReloadTranslationsCommandHandler.cs" />
   </ItemGroup>

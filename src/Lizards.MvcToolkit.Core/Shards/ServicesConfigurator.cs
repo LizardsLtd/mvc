@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Lizards.MvcToolkit.Configuration
+namespace Lizards.MvcToolkit.Core.Shards
 {
     public sealed class ServicesConfigurator
     {

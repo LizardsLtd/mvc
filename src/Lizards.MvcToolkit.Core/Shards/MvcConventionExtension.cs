@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Mvc.ApplicationModels;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Lizards.MvcToolkit.Configuration
+namespace Lizards.MvcToolkit.Core.Shards
 {
     public static class MvcConventionExtension
     {

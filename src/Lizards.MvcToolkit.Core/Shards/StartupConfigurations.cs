@@ -1,8 +1,8 @@
-﻿using Microsoft.AspNetCore.Hosting;
+﻿using Lizards.MvcToolkit.Core.Shards.Defaults;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
-using Lizards.MvcToolkit.Configuration.Defaults;
 
-namespace Lizards.MvcToolkit.Configuration
+namespace Lizards.MvcToolkit.Core.Shards
 {
     public sealed class StartupConfigurations
     {
@@ -34,9 +34,9 @@ namespace Lizards.MvcToolkit.Configuration
 
         public IConfiguration Configuration { get; }
 
-        public void Apply<TDefault>(params object[] arguments) where TDefault : IDefault, new()
+        public void Apply<TDefault>(params object[] arguments) where TDefault : IShard, new()
             => this.Apply(new TDefault(), arguments);
 
-        internal void Apply(IDefault @default, params object[] arguments) => @default.Apply(this, arguments);
+        internal void Apply(IShard @default, params object[] arguments) => @default.Apply(this, arguments);
     }
 }

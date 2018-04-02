@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc.Razor;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Lizards.MvcToolkit.Configuration
+namespace Lizards.MvcToolkit.Core.Shards
 {
     public sealed class RazorConfig
     {
@@ -12,7 +12,7 @@ namespace Lizards.MvcToolkit.Configuration
         internal RazorConfig()
             => this.actions = new List<Action<RazorViewEngineOptions>>();
 
-        internal void Options(Action<RazorViewEngineOptions> options)
+        public void Options(Action<RazorViewEngineOptions> options)
             => this.actions.Add(options);
 
         internal void Use(IServiceCollection services)

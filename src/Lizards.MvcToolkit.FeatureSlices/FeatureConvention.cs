@@ -1,11 +1,11 @@
-﻿using System;
-using System.Linq;
-using System.Reflection;
-using Microsoft.AspNetCore.Mvc.ApplicationModels;
-
-namespace Lizards.MvcToolkit.FeatureSlices
+﻿namespace Lizards.MvcToolkit.FeatureSlices
 {
-    internal sealed class FeatureConvention : IControllerModelConvention
+    using System;
+    using System.Linq;
+    using System.Reflection;
+    using Microsoft.AspNetCore.Mvc.ApplicationModels;
+
+    public sealed class FeatureConvention : IControllerModelConvention
 
     {
         public void Apply(ControllerModel controller)

@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
 
-namespace Lizards.MvcToolkit.Configuration.Defaults
+namespace Lizards.MvcToolkit.Core.Shards.Defaults
 {
-    public interface IDefault
+    public interface IShard
     {
         void Apply(StartupConfigurations host, IEnumerable<object> arguments);
     }

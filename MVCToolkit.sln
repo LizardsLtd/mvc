@@ -21,7 +21,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shards.Geocoding", "src\Liz
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UserAccess", "src\Lizards.MvcToolkit.UserAccess\UserAccess.csproj", "{B075A66C-686D-40A4-AE87-F9375A6A2B69}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lizards.MvcToolkit.FeatureSlices", "src\Lizards.MvcToolkit.FeatureSlices\Lizards.MvcToolkit.FeatureSlices.csproj", "{A7CB9528-4A25-458B-926D-FB146AEADCEC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FeatureSlices", "src\Lizards.MvcToolkit.FeatureSlices\FeatureSlices.csproj", "{A7CB9528-4A25-458B-926D-FB146AEADCEC}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DefaultShards", "src\Lizards.MvcToolkit.DefaultShards\DefaultShards.csproj", "{9E5A9467-1C8A-4B81-9FE4-6C1B90525A7E}"
 EndProject

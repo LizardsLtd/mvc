@@ -6,7 +6,7 @@ using ASPConfigAction
         <Microsoft.AspNetCore.Builder.IApplicationBuilder
         , Microsoft.AspNetCore.Hosting.IHostingEnvironment>;
 
-namespace Lizards.MvcToolkit.Configuration
+namespace Lizards.MvcToolkit.Core.Shards
 {
     public sealed class AspConfigurator
     {
