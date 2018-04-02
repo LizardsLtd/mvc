@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 
-namespace Lizards.MvcToolkit..Configuration.Defaults
+namespace Lizards.MvcToolkit.Configuration.Defaults
 {
     public sealed class UseStaticFiles : BasicDefault
     {

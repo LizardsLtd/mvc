@@ -2,9 +2,9 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Routing;
 using Microsoft.Extensions.DependencyInjection;
-using Lizards.MvcToolkit..Navigation;
+using Lizards.MvcToolkit.Navigation;
 
-namespace Lizards.MvcToolkit..Configuration
+namespace Lizards.MvcToolkit.Configuration
 {
     public sealed class MvcConfig
     {

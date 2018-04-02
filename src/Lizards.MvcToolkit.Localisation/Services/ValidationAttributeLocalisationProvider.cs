@@ -4,7 +4,7 @@ using System.Linq;
 using Microsoft.AspNetCore.Mvc.ModelBinding.Metadata;
 using Microsoft.Extensions.Localization;
 
-namespace Lizards.MvcToolkit..Localisation.Services
+namespace Lizards.MvcToolkit.Localisation.Services
 {
     public sealed class ValidationAttributeLocalisationProvider : IValidationMetadataProvider
     {

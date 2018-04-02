@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 using Picums.Data.Types;
 
-namespace Lizards.MvcToolkit..ApplicationServices
+namespace Lizards.MvcToolkit.ApplicationServices
 {
     public sealed class EmailModelBinder : IModelBinder
     {

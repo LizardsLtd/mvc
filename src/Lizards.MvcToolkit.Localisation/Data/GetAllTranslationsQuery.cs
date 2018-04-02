@@ -4,7 +4,7 @@ using NLog;
 using Picums.Data.CQRS.DataAccess;
 using Picums.Data.CQRS.Queries;
 
-namespace Lizards.MvcToolkit..Localisation.DataStorage
+namespace Lizards.MvcToolkit.Localisation.DataStorage
 {
     public sealed class GetAllTranslationsQuery
     {

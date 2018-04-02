@@ -4,9 +4,9 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Localization;
 using Picums.Web.Shared;
 using INavigationQueryWithUrlHelper =
-	Lizards.MvcToolkit..Navigation.IRequireUrlHelper<Lizards.MvcToolkit..Navigation.INavigationItemQuery>;
+	Lizards.MvcToolkit.Navigation.IRequireUrlHelper<Lizards.MvcToolkit.Navigation.INavigationItemQuery>;
 
-namespace Lizards.MvcToolkit..Navigation
+namespace Lizards.MvcToolkit.Navigation
 {
 	public sealed class NavigationQuery :
 		IRequireTranslator<INavigationQueryWithUrlHelper>

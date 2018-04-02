@@ -3,7 +3,7 @@ using System.Globalization;
 using System.Linq;
 using Microsoft.Extensions.Localization;
 
-namespace Lizards.MvcToolkit..Localisation
+namespace Lizards.MvcToolkit.Localisation
 {
     public sealed class ConfigurableStringLocalizer : IStringLocalizer
     {

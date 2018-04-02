@@ -1,7 +1,7 @@
 ﻿using System.Linq;
 using NLog;
 
-namespace Lizards.MvcToolkit..Localisation.DataStorage
+namespace Lizards.MvcToolkit.Localisation.DataStorage
 {
     public sealed class DataTranslationProvider : ITranslationSetProvider
     {

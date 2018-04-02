@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
-using Lizards.MvcToolkit..Configuration.Defaults;
+using Lizards.MvcToolkit.Configuration.Defaults;
 
-namespace Lizards.MvcToolkit..Configuration
+namespace Lizards.MvcToolkit.Configuration
 {
     public sealed class StartupConfigurations
     {

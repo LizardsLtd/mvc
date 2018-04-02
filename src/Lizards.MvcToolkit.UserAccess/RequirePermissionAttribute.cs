@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Lizards.MvcToolkit..UserAccess
+namespace Lizards.MvcToolkit.UserAccess
 {
     public sealed class RequirePermissionAttribute : Attribute
     {

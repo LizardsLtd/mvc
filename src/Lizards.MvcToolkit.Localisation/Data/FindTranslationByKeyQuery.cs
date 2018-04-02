@@ -6,7 +6,7 @@ using Picums.Data.CQRS.DataAccess;
 using Picums.Data.CQRS.Queries;
 using Picums.Maybe;
 
-namespace Lizards.MvcToolkit..Localisation.DataStorage
+namespace Lizards.MvcToolkit.Localisation.DataStorage
 {
     public sealed class FindTranslationByKeyQuery : QueryProvider<Maybe<TranslationItem>>, IsQuery
     {

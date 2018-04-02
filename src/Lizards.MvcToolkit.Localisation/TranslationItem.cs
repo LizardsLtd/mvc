@@ -4,7 +4,7 @@ using System.Globalization;
 using Newtonsoft.Json;
 using Picums.Data.Domain;
 
-namespace Lizards.MvcToolkit..Localisation
+namespace Lizards.MvcToolkit.Localisation
 {
     [DebuggerDisplay("{CultureName}:{TranslationKey}:{Value}")]
     public sealed class TranslationItem : IAggregateRoot, IEquatable<TranslationItem>

@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
 using Picums.Data.Types;
 using Picums.Data.Types.Services;
 
-namespace Lizards.MvcToolkit..ModelValidators
+namespace Lizards.MvcToolkit.ModelValidators
 {
 	public sealed class BankDetailsModelValidator : IModelValidator
 	{

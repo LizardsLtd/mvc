@@ -7,7 +7,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Picums.Data.CQRS;
 using Picums.Data.CQRS.DataAccess;
 
-namespace Lizards.MvcToolkit..Configuration.Defaults
+namespace Lizards.MvcToolkit.Configuration.Defaults
 {
     public sealed class CQRSDefaults : BasicDefault
     {

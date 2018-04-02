@@ -2,7 +2,7 @@
 using Microsoft.Extensions.DependencyInjection;
 using Picums.GeoCoding;
 
-namespace Lizards.MvcToolkit..Configuration.Defaults
+namespace Lizards.MvcToolkit.Configuration.Defaults
 {
     public sealed class GeoCodingDefault : BasicDefault
     {

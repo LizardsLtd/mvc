@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Localization;
 
-namespace Lizards.MvcToolkit..Localisation
+namespace Lizards.MvcToolkit.Localisation
 {
     internal class LocalisedIdentityErrorDescriber : IdentityErrorDescriber
     {

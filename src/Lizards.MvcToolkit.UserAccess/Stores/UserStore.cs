@@ -8,9 +8,9 @@ using Microsoft.AspNetCore.Identity;
 using NLog;
 using Picums.Data.CQRS;
 using Picums.Data.Events;
-using Lizards.MvcToolkit..UserAccess.Claims;
+using Lizards.MvcToolkit.UserAccess.Claims;
 
-namespace Lizards.MvcToolkit..UserAccess.Stores
+namespace Lizards.MvcToolkit.UserAccess.Stores
 {
     public sealed class UserStore<TUser>
             : UserStoreBase<TUser, Guid, AggregateUserClaim, AggregateUserLogin, AggregateUserToken>,

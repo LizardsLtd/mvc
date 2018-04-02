@@ -4,10 +4,10 @@ using System.Reflection;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc.Controllers;
-using Lizards.MvcToolkit..UserAccess.Claims;
+using Lizards.MvcToolkit.UserAccess.Claims;
 using MvcAuthorizationContext = Microsoft.AspNetCore.Mvc.Filters.AuthorizationFilterContext;
 
-namespace Lizards.MvcToolkit..UserAccess
+namespace Lizards.MvcToolkit.UserAccess
 {
     internal sealed class PermissionRequirement : AuthorizationHandler<PermissionRequirement>, IAuthorizationRequirement
     {

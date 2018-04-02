@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using Picums.Web.Shared;
 
-namespace Lizards.MvcToolkit..Navigation
+namespace Lizards.MvcToolkit.Navigation
 {
 	public interface INavigationItemQuery
 	{

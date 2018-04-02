@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Lizards.MvcToolkit..Configuration.Defaults
+namespace Lizards.MvcToolkit.Configuration.Defaults
 {
     public abstract class BasicDefault : IDefault
     {

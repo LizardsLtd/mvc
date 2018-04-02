@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Lizards.MvcToolkit..Navigation
+namespace Lizards.MvcToolkit.Navigation
 {
 	[AttributeUsage(AttributeTargets.Method, AllowMultiple = true, Inherited = false)]
 	public sealed class MenuAttribute : Attribute, IMenuAttribute

@@ -3,7 +3,7 @@ using NLog;
 using Picums.Data.CQRS;
 using Picums.Data.CQRS.DataAccess;
 
-namespace Lizards.MvcToolkit..Localisation.DataStorage
+namespace Lizards.MvcToolkit.Localisation.DataStorage
 {
     public sealed class AddNewTranslationCommandHandler : ICommandHandler<AddNewTranslationCommand>
     {

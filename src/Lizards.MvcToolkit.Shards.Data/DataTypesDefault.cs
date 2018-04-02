@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
 using Picums.Data.Types;
-using Lizards.MvcToolkit..ApplicationServices;
-using Lizards.MvcToolkit..Configuration.Defaults;
+using Lizards.MvcToolkit.ApplicationServices;
+using Lizards.MvcToolkit.Configuration.Defaults;
 
-namespace Lizards.MvcToolkit..Configuration.Data
+namespace Lizards.MvcToolkit.Configuration.Data
 {
     public sealed class DataTypesDefault : IDefault
     {

@@ -1,4 +1,4 @@
-﻿namespace Lizards.MvcToolkit..View
+﻿namespace Lizards.MvcToolkit.View
 {
     public static class Names
     {

@@ -6,11 +6,11 @@ using Microsoft.AspNetCore.Localization;
 using Microsoft.AspNetCore.Mvc.Localization;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Localization;
-using Lizards.MvcToolkit..Localisation;
-using Lizards.MvcToolkit..Localisation.Services;
-using Lizards.MvcToolkit..Middleware;
+using Lizards.MvcToolkit.Localisation;
+using Lizards.MvcToolkit.Localisation.Services;
+using Lizards.MvcToolkit.Middleware;
 
-namespace Lizards.MvcToolkit..Configuration.Defaults
+namespace Lizards.MvcToolkit.Configuration.Defaults
 {
     public sealed class SetLocalisation : BasicDefault
     {

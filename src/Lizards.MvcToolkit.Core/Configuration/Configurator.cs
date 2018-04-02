@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Lizards.MvcToolkit..Configuration
+namespace Lizards.MvcToolkit.Configuration
 {
     public sealed class Configurator<TAction>
     {

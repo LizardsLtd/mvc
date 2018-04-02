@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ModelBinding.Metadata;
 
-namespace Lizards.MvcToolkit..Configuration
+namespace Lizards.MvcToolkit.Configuration
 {
     public static class MvcModelMetadataExtension
     {

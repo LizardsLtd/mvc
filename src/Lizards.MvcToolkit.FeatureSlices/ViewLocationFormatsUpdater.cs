@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc.Razor;
 
-namespace Lizards.MvcToolkit..FeatureSlices
+namespace Lizards.MvcToolkit.FeatureSlices
 {
 	internal sealed class ViewLocationFormatsUpdater
 	{

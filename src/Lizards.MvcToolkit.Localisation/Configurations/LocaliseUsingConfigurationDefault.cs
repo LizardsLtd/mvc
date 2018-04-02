@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
 using Microsoft.Extensions.DependencyInjection;
-using Lizards.MvcToolkit..Configuration.Defaults;
+using Lizards.MvcToolkit.Configuration.Defaults;
 
-namespace Lizards.MvcToolkit..Localisation.Configuration.Defaults
+namespace Lizards.MvcToolkit.Localisation.Configuration.Defaults
 {
     public sealed class LocaliseUsingConfigurationDefault : BasicDefault
     {

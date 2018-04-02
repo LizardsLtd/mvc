@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Picums.Data.Events;
 
-namespace Lizards.MvcToolkit..UserAccess.Stores
+namespace Lizards.MvcToolkit.UserAccess.Stores
 {
     public sealed class UserCreationProcessFinishedEvent : EventBase
     {

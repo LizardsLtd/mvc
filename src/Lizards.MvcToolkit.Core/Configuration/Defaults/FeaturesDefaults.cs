@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using Lizards.MvcToolkit..FeatureSlices;
+using Lizards.MvcToolkit.FeatureSlices;
 
-namespace Lizards.MvcToolkit..Configuration.Defaults
+namespace Lizards.MvcToolkit.Configuration.Defaults
 {
     public sealed class FeaturesDefaults : IDefault
     {

@@ -6,7 +6,7 @@
 //using Microsoft.AspNetCore.Identity;
 //using Microsoft.Extensions.Options;
 
-//namespace Lizards.MvcToolkit..UserAccess
+//namespace Lizards.MvcToolkit.UserAccess
 //{
 //    internal sealed class ClaimsPrincipalFactory<TUser> : IUserClaimsPrincipalFactory<TUser>
 //         where TUser : class, IClaimsProvider

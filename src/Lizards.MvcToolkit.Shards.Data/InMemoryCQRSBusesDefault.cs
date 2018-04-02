@@ -4,7 +4,7 @@ using Microsoft.Extensions.DependencyInjection.Extensions;
 using Picums.Data.CQRS;
 using Picums.Data.Events;
 
-namespace Lizards.MvcToolkit..Configuration.Defaults
+namespace Lizards.MvcToolkit.Configuration.Defaults
 {
     public sealed class InMemoryCQRSBusesDefault : BasicDefault
     {

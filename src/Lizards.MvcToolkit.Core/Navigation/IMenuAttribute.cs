@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Lizards.MvcToolkit..Navigation
+namespace Lizards.MvcToolkit.Navigation
 {
 	public interface IMenuAttribute : IEquatable<IMenuAttribute>
 	{

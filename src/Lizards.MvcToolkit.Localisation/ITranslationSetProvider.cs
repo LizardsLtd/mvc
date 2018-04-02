@@ -1,4 +1,4 @@
-﻿namespace Lizards.MvcToolkit..Localisation
+﻿namespace Lizards.MvcToolkit.Localisation
 {
     public interface ITranslationSetProvider
     {

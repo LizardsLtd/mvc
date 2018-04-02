@@ -1,7 +1,7 @@
 ﻿using Markdig;
 using Microsoft.AspNetCore.Mvc.Localization;
 
-namespace Lizards.MvcToolkit..View
+namespace Lizards.MvcToolkit.View
 {
     public static class CommonMarkExtension
     {

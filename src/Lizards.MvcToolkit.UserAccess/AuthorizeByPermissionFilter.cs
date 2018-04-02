@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Authorization;
 using Microsoft.AspNetCore.Mvc.Filters;
 
-namespace Lizards.MvcToolkit..UserAccess
+namespace Lizards.MvcToolkit.UserAccess
 {
     public sealed class AuthorizeByPermissionFilter : AuthorizeFilter
     {

@@ -1,6 +1,6 @@
 using Microsoft.Extensions.Localization;
 
-namespace Lizards.MvcToolkit..Navigation
+namespace Lizards.MvcToolkit.Navigation
 {
 	public interface IRequireTranslator<out TResult>
 	{

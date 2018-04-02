@@ -1,7 +1,7 @@
 ﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc.ApplicationModels;
 
-namespace Lizards.MvcToolkit..Navigation
+namespace Lizards.MvcToolkit.Navigation
 {
 	[DebuggerDisplay("Section:{Section},Name:{Name},Action:{Action},Controller:{Controller},IsAnonymous:{IsVisibleToAnonymous},IsVisibleToLoggedUsers:{IsVisibleToLoggedUsers},OrderNumber:{OrderNumber}")]
 	public sealed class NavigationPrototype

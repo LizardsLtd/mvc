@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc.ModelBinding;
 
-namespace Lizards.MvcToolkit..ModelBinder
+namespace Lizards.MvcToolkit.ModelBinder
 {
 	public sealed class ModelBinderProvider<TBindType, TModelBinder> : IModelBinderProvider
 		where TModelBinder : IModelBinder, new()

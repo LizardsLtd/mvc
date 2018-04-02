@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 
-namespace Lizards.MvcToolkit..Localisation
+namespace Lizards.MvcToolkit.Localisation
 {
     public sealed class TranslationSet
     {

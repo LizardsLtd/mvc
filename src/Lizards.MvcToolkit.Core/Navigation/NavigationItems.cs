@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using INavigationQueryWithUrlHelper =
-	Lizards.MvcToolkit..Navigation.IRequireUrlHelper<Lizards.MvcToolkit..Navigation.INavigationItemQuery>;
+	Lizards.MvcToolkit.Navigation.IRequireUrlHelper<Lizards.MvcToolkit.Navigation.INavigationItemQuery>;
 
-namespace Lizards.MvcToolkit..Navigation
+namespace Lizards.MvcToolkit.Navigation
 {
 	public sealed class NavigationItems
 	{

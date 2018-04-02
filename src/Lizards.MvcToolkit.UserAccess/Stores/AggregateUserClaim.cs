@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Identity;
 using Picums.Data.Domain;
 
-namespace Lizards.MvcToolkit..UserAccess.Stores
+namespace Lizards.MvcToolkit.UserAccess.Stores
 {
     public sealed class AggregateUserClaim : IdentityUserClaim<Guid>, IAggregateRoot
     {

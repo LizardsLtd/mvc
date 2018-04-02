@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Localization;
 
-namespace Lizards.MvcToolkit..Middleware
+namespace Lizards.MvcToolkit.Middleware
 {
     public sealed class CultureCookieSetterMiddleware
     {

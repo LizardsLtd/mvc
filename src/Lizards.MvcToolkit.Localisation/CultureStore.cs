@@ -4,7 +4,7 @@ using System.Linq;
 using Microsoft.AspNetCore.Localization;
 using Microsoft.Extensions.Configuration;
 
-namespace Lizards.MvcToolkit..Localisation
+namespace Lizards.MvcToolkit.Localisation
 {
     public sealed class CultureStore
     {

@@ -4,7 +4,7 @@ using System.Globalization;
 using System.Linq;
 using Microsoft.Extensions.Configuration;
 
-namespace Lizards.MvcToolkit..Localisation
+namespace Lizards.MvcToolkit.Localisation
 {
     public sealed class JsonTransaltionProvider : ITranslationSetProvider
     {

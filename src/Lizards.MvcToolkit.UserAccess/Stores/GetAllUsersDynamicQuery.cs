@@ -6,9 +6,9 @@ using NLog;
 using Picums.Data.CQRS;
 using Picums.Data.CQRS.DataAccess;
 using Picums.Data.CQRS.Queries;
-using Lizards.MvcToolkit..UserAccess.Claims;
+using Lizards.MvcToolkit.UserAccess.Claims;
 
-namespace Lizards.MvcToolkit..UserAccess.Stores
+namespace Lizards.MvcToolkit.UserAccess.Stores
 {
     public sealed class GetAllUsersDynamicQuery<TUser> : QueryProvider<IQueryable<TUser>>, IsQuery
         where TUser : IdentityUser<Guid>, IUser

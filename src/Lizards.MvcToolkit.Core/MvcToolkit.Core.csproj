@@ -13,6 +13,58 @@
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Remove="Microsoft.AspNetCore.Builder\**" />
+    <Compile Remove="Microsoft.Extensions.DependencyInjection\**" />
+    <Compile Remove="Middleware\**" />
+    <Compile Remove="ModelBinder\**" />
+    <Compile Remove="ModelValidators\**" />
+    <Compile Remove="Navigation\**" />
+    <Compile Remove="System.ComponentModel.DataAnnotations\**" />
+    <Compile Remove="View\**" />
+    <EmbeddedResource Remove="Microsoft.AspNetCore.Builder\**" />
+    <EmbeddedResource Remove="Microsoft.Extensions.DependencyInjection\**" />
+    <EmbeddedResource Remove="Middleware\**" />
+    <EmbeddedResource Remove="ModelBinder\**" />
+    <EmbeddedResource Remove="ModelValidators\**" />
+    <EmbeddedResource Remove="Navigation\**" />
+    <EmbeddedResource Remove="System.ComponentModel.DataAnnotations\**" />
+    <EmbeddedResource Remove="View\**" />
+    <None Remove="Microsoft.AspNetCore.Builder\**" />
+    <None Remove="Microsoft.Extensions.DependencyInjection\**" />
+    <None Remove="Middleware\**" />
+    <None Remove="ModelBinder\**" />
+    <None Remove="ModelValidators\**" />
+    <None Remove="Navigation\**" />
+    <None Remove="System.ComponentModel.DataAnnotations\**" />
+    <None Remove="View\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Configuration\AspConfigurator.cs" />
+    <Compile Remove="Configuration\AspNetStartup.cs" />
+    <Compile Remove="Configuration\Configurator.cs" />
+    <Compile Remove="Configuration\Defaults\BasicDefault.cs" />
+    <Compile Remove="Configuration\Defaults\DependencyInjectionDefault.cs" />
+    <Compile Remove="Configuration\Defaults\DevelopmentSetup.cs" />
+    <Compile Remove="Configuration\Defaults\FeaturesDefaults.cs" />
+    <Compile Remove="Configuration\Defaults\IDefault.cs" />
+    <Compile Remove="Configuration\Defaults\MiddlewareDefault.cs" />
+    <Compile Remove="Configuration\Defaults\ModelBinderDefault.cs" />
+    <Compile Remove="Configuration\Defaults\OptionsDefault.cs" />
+    <Compile Remove="Configuration\Defaults\RouteDefault.cs" />
+    <Compile Remove="Configuration\Defaults\UseStaticFiles.cs" />
+    <Compile Remove="Configuration\ModelBinderExtension.cs" />
+    <Compile Remove="Configuration\MvcConfig.cs" />
+    <Compile Remove="Configuration\MvcConventionExtension.cs" />
+    <Compile Remove="Configuration\MvcFilterExtension.cs" />
+    <Compile Remove="Configuration\MvcModelMetadataExtension.cs" />
+    <Compile Remove="Configuration\RazorConfig.cs" />
+    <Compile Remove="Configuration\ServicesConfigurator.cs" />
+    <Compile Remove="Configuration\StartupConfigurations.cs" />
+    <Compile Remove="CultureInfoExtension.cs" />
+    <Compile Remove="IdentityErrorExtension.cs" />
+    <Compile Remove="IServiceProviderExtension.cs" />
+  </ItemGroup>
+  <ItemGroup>
     <AdditionalFiles Include="..\..\..\stylecop.json" Link="stylecop.json" />
   </ItemGroup>
   <ItemGroup>
@@ -29,5 +81,9 @@
     <PackageReference Include="Microsoft.Extensions.Identity.Core" Version="2.0.1" />
     <PackageReference Include="Microsoft.Extensions.Localization.Abstractions" Version="2.0.1" />
     <PackageReference Include="NLog" Version="4.5.0-rc06" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Configuration\" />
+    <Folder Include="Configuration\Defaults\" />
   </ItemGroup>
 </Project>

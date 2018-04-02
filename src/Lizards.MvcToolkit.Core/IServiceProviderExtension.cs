@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Lizards.MvcToolkit.
+namespace Lizards.MvcToolkit.Core
 {
     public static class IServiceProviderExtension
     {

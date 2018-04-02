@@ -2,7 +2,7 @@
 using System.Linq;
 using System.Security.Claims;
 
-namespace Lizards.MvcToolkit..UserAccess.Claims
+namespace Lizards.MvcToolkit.UserAccess.Claims
 {
     public sealed class PermissionClaimProvider : IClaimProvider
     {

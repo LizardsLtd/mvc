@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Lizards.MvcToolkit..UserAccess.Claims
+namespace Lizards.MvcToolkit.UserAccess.Claims
 {
     public struct Permission : IEquatable<Permission>
     {
