@@ -51,13 +51,17 @@
     <Compile Remove="Shards\Defaults\UseStaticFiles.cs" />
     <Compile Remove="CultureInfoExtension.cs" />
     <Compile Remove="IdentityErrorExtension.cs" />
-    <Compile Remove="IServiceProviderExtension.cs" />
   </ItemGroup>
   <ItemGroup>
-    <AdditionalFiles Include="..\..\..\stylecop.json" Link="stylecop.json" />
-  </ItemGroup>
-  <ItemGroup>
+    <Compile Include="Microsoft.Extensions.DependencyInjection\AutomaticDiscovery.cs" />
+    <Compile Include="Microsoft.Extensions.DependencyInjection\AutomaticDiscoveryExtension.cs" />
+    <Compile Include="Microsoft.Extensions.DependencyInjection\TypeAssigment.cs" />
+    <Compile Include="Microsoft.Extensions.DependencyInjection\TypeFiler.cs" />
+    <Compile Include="Microsoft.Extensions.DependencyInjection\TypeQuery.cs" />
     <Compile Include="ModelBinder\ModelBinderProvider.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\..\stylecop.json" Link="stylecop.json" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Lizards.Maybe" Version="0.3.3" />

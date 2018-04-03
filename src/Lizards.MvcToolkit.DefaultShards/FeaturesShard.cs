@@ -3,7 +3,7 @@
     using System.Collections.Generic;
     using Lizards.MvcToolkit.FeatureSlices;
 
-    public sealed class FeaturesShard : IShard
+    public sealed class FeaturesShard : ShardBase
     {
         public void Apply(StartupConfigurations host, IEnumerable<object> arguments)
         {

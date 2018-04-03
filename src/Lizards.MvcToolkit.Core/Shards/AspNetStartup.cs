@@ -1,12 +1,11 @@
-﻿using System;
-using Lizards.MvcToolkit.Core.Shards.Defaults;
-using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
-
-namespace Lizards.MvcToolkit.Core.Shards
+﻿namespace Lizards.MvcToolkit.Core.Shards
 {
+    using System;
+    using Microsoft.AspNetCore.Builder;
+    using Microsoft.AspNetCore.Hosting;
+    using Microsoft.Extensions.Configuration;
+    using Microsoft.Extensions.DependencyInjection;
+
     public abstract class AspNetStartup
     {
         private readonly StartupConfigurations configuration;
@@ -50,10 +49,10 @@ namespace Lizards.MvcToolkit.Core.Shards
         }
 
         public void ApplyDefault<TDefault>(params object[] arguments)
-                where TDefault : IShard, new()
+                where TDefault : ShardBase, new()
             => this.ApplyDefault(new TDefault(), arguments);
 
-        public void ApplyDefault(IShard @default, params object[] arguments)
+        public void ApplyDefault(ShardBase @default, params object[] arguments)
         {
             this.configuration.Apply(@default, arguments);
         }

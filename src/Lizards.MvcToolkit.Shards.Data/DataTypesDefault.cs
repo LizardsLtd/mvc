@@ -1,11 +1,8 @@
 ﻿using System.Collections.Generic;
-using Picums.Data.Types;
-using Lizards.MvcToolkit.ApplicationServices;
-using Lizards.MvcToolkit.Core.Shards.Defaults;
 
 namespace Lizards.MvcToolkit.Core.Shards.Data
 {
-    public sealed class DataTypesDefault : IDefault
+    public sealed class DataTypesDefault : IShard
     {
         public void Apply(StartupConfigurations host, IEnumerable<object> arguments)
         {

@@ -1,12 +1,13 @@
-﻿using System.Collections.Generic;
-using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
-
-namespace Lizards.MvcToolkit.Configuration.Defaults
+﻿
+namespace Lizards.MvcToolkit.Core.Shards
 {
-    public abstract class BasicDefault : IDefault
+    using System.Collections.Generic;
+    using Microsoft.AspNetCore.Builder;
+    using Microsoft.AspNetCore.Hosting;
+    using Microsoft.Extensions.Configuration;
+    using Microsoft.Extensions.DependencyInjection;
+
+    public abstract class ShardBase : IShard
     {
         protected IConfiguration Configuration { get; private set; }
 

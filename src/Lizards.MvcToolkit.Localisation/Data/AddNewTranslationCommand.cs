@@ -1,6 +1,4 @@
-﻿using Picums.Data.CQRS;
-
-namespace Lizards.MvcToolkit.Localisation.DataStorage
+﻿namespace Lizards.MvcToolkit.Localisation.DataStorage
 {
     public sealed class AddNewTranslationCommand : CommandBase, ICommand
     {

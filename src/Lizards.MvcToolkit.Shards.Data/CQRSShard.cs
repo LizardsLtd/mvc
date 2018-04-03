@@ -1,15 +1,18 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
-using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.DependencyInjection;
-using Picums.Data.CQRS;
-using Picums.Data.CQRS.DataAccess;
-
-namespace Lizards.MvcToolkit.Core.Shards.Defaults
+﻿namespace Lizards.MvcToolkit.Core.Shards.Defaults
 {
-    public sealed class CQRSDefaults : BasicDefault
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Reflection;
+    using Lizards.Data.CQRS;
+    using Lizards.Data.CQRS.DataAccess;
+    using Microsoft.AspNetCore.Builder;
+    using Microsoft.AspNetCore.Hosting;
+    using Microsoft.Extensions.DependencyInjection;
+
+    /// <summary>
+    /// Automatic registration of all CQRS required items
+    /// </summary>
+    public sealed class CQRSShard : ShardBase
     {
         protected override void ConfigureApp(
                 IApplicationBuilder app,

@@ -1,7 +1,7 @@
-﻿using System;
-
-namespace Lizards.MvcToolkit.Core
+﻿namespace Lizards.MvcToolkit.Core
 {
+    using System;
+
     public static class IServiceProviderExtension
     {
         public static T GetService<T>(this IServiceProvider serviceProvider)

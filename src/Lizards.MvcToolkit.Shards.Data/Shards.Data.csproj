@@ -14,15 +14,19 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <AdditionalFiles Include="..\..\..\..\stylecop.json" Link="stylecop.json" />
+    <Compile Remove="DataTypesDefault.cs" />
   </ItemGroup>
 
   <ItemGroup>
+    <Content Include="..\..\stylecop.json" Link="stylecop.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Lizards.Data" Version="0.18.1" />
     <PackageReference Include="NLog" Version="4.5.0-rc06" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Picums.Data\Picums.Data.csproj" />
-    <ProjectReference Include="..\..\Mvc\Picums.Mvc.csproj" />
+    <ProjectReference Include="..\Lizards.MvcToolkit.Core\MvcToolkit.Core.csproj" />
   </ItemGroup>
 </Project>
