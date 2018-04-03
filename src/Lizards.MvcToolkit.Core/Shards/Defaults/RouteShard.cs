@@ -5,7 +5,7 @@
     using System.Linq;
     using Microsoft.AspNetCore.Routing;
 
-    public sealed class RouteDefault : IShard
+    public sealed class RouteShard : IShard
     {
         public void Apply(StartupConfigurations host, IEnumerable<object> arguments)
             => arguments

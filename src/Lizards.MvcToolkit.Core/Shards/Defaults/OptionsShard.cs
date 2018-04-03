@@ -4,7 +4,7 @@
     using System.Collections.Generic;
     using System.Linq;
 
-    public sealed class OptionsDefault<TOptions> : IShard
+    public sealed class OptionsShard<TOptions> : IShard
         where TOptions : class
     {
         public void Apply(StartupConfigurations host, IEnumerable<object> arguments)

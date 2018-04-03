@@ -33,9 +33,11 @@
 
         public IConfiguration Configuration { get; }
 
-        public void Apply<TDefault>(params object[] arguments) where TDefault : ShardBase, new()
+        internal void Apply<TDefault, TArgument>(TArgument arguments)
+                where TDefault : ShardBase, new()
             => this.Apply(new TDefault(), arguments);
 
-        internal void Apply(ShardBase @default, params object[] arguments) => @default.Apply(this, arguments);
+        internal void Apply<TArgument>(IShard @default, TArgument argument)
+            => @default.Apply(this, argument);
     }
 }
