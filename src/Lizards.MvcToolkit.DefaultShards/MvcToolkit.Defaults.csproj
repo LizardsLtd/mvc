@@ -2,8 +2,9 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.0</TargetFramework>
-    <AssemblyName>Lizards.MvcToolkit.DefaultShards</AssemblyName>
-    <RootNamespace>Lizards.MvcToolkit.DefaultShards</RootNamespace>
+    <AssemblyName>Lizards.MvcToolkit.Defaults</AssemblyName>
+    <RootNamespace>Lizards.MvcToolkit.Default</RootNamespace>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <ItemGroup>

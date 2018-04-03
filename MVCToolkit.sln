@@ -19,7 +19,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shards.Data", "src\Lizards.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FeatureSlices", "src\Lizards.MvcToolkit.FeatureSlices\FeatureSlices.csproj", "{A7CB9528-4A25-458B-926D-FB146AEADCEC}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DefaultShards", "src\Lizards.MvcToolkit.DefaultShards\DefaultShards.csproj", "{9E5A9467-1C8A-4B81-9FE4-6C1B90525A7E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MvcToolkit.Defaults", "src\Lizards.MvcToolkit.DefaultShards\MvcToolkit.Defaults.csproj", "{9E5A9467-1C8A-4B81-9FE4-6C1B90525A7E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
