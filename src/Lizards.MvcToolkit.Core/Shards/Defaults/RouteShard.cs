@@ -5,11 +5,10 @@
     using System.Linq;
     using Microsoft.AspNetCore.Routing;
 
-    public sealed class RouteShard : IShard
+    public sealed class RouteShard : IShard<IEnumerable<Action<IRouteBuilder>>>
     {
-        public void Apply(StartupConfigurations host, IEnumerable<object> arguments)
+        public void Apply(StartupConfigurations host, IEnumerable<Action<IRouteBuilder>> arguments)
             => arguments
-                .Cast<Action<IRouteBuilder>>()
                 .ToList()
                 .ForEach(routeAction => host.MVC.Routes.Add(routeAction));
     }

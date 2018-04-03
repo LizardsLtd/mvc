@@ -12,22 +12,18 @@
     /// <summary>
     /// Automatic registration of all CQRS required items
     /// </summary>
-    public sealed class CQRSShard : ShardBase
+    public sealed class CQRSShard : ShardBase<IEnumerable<string>>
     {
-        protected override void ConfigureApp(
-                IApplicationBuilder app,
-                IHostingEnvironment env,
-                IEnumerable<object> arguments)
+        protected override void ConfigureApp(IApplicationBuilder app, IHostingEnvironment env, IEnumerable<string> arguments)
             => app
                 .ApplicationServices
                 .GetService<IDataContextInitialiser>()
                 .Initialise()
                 .Wait();
 
-        protected override void ConfigureServices(IServiceCollection services, IEnumerable<object> arguments)
+        protected override void ConfigureServices(IServiceCollection services, IEnumerable<string> arguments)
         {
             arguments
-                .Cast<string>()
                 .Select(assemblyName => Assembly.Load(new AssemblyName(assemblyName)))
                 .ToList()
                 .ForEach(assembly => this.AutomaticDetection(services, assembly));

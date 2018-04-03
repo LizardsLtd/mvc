@@ -1,18 +1,13 @@
 ﻿namespace Lizards.MvcToolkit.Core.Shards.Defaults
 {
     using System;
-    using System.Collections.Generic;
-    using System.Linq;
 
-    public sealed class OptionsShard<TOptions> : IShard
+    public sealed class OptionsShard<TOptions> : IShard<Action<TOptions>>
         where TOptions : class
     {
-        public void Apply(StartupConfigurations host, IEnumerable<object> arguments)
+        public void Apply(StartupConfigurations host, Action<TOptions> arguments)
         {
-            if (arguments.FirstOrDefault() is Action<TOptions> configure)
-            {
-                host.Services.Configure(configure);
-            }
+            host.Services.Configure(arguments);
         }
     }
 }

@@ -6,7 +6,7 @@
     using Lizards.MvcToolkit.Core.Shards;
     using Microsoft.Extensions.DependencyInjection;
 
-    public sealed class DependencyInjectionShard : ShardBase
+    public sealed class DependencyInjectionShard : ArgumentLessShardBase
     {
         private readonly List<Action<IServiceCollection>> configurationActions;
 
@@ -15,7 +15,7 @@
             this.configurationActions = configurationActions.ToList();
         }
 
-        protected override void ConfigureServices(IServiceCollection services, IEnumerable<object> arguments)
+        protected override void ConfigureServices(IServiceCollection services, object arguments)
             => configurationActions.ForEach(x => x(services));
     }
 }

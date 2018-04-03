@@ -23,7 +23,7 @@
 
   <ItemGroup>
     <PackageReference Include="Lizards.Data" Version="0.18.1" />
-    <PackageReference Include="NLog" Version="4.5.0-rc06" />
+    <PackageReference Include="NLog" Version="4.5.0" />
   </ItemGroup>
 
   <ItemGroup>

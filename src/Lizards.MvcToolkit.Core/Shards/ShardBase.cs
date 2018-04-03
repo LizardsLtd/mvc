@@ -1,19 +1,17 @@
-﻿
-namespace Lizards.MvcToolkit.Core.Shards
+﻿namespace Lizards.MvcToolkit.Core.Shards
 {
-    using System.Collections.Generic;
     using Microsoft.AspNetCore.Builder;
     using Microsoft.AspNetCore.Hosting;
     using Microsoft.Extensions.Configuration;
     using Microsoft.Extensions.DependencyInjection;
 
-    public abstract class ShardBase : IShard
+    public abstract class ShardBase<TArgument> : IShard<TArgument>
     {
         protected IConfiguration Configuration { get; private set; }
 
         protected MvcConfig Mvc { get; private set; }
 
-        public void Apply(StartupConfigurations host, IEnumerable<object> arguments)
+        public void Apply(StartupConfigurations host, TArgument arguments)
         {
             this.Configuration = host.Configuration;
             this.Mvc = host.MVC;
@@ -30,11 +28,11 @@ namespace Lizards.MvcToolkit.Core.Shards
         protected virtual void ConfigureApp(
             IApplicationBuilder app,
             IHostingEnvironment env,
-            IEnumerable<object> arguments)
+            TArgument arguments)
         {
         }
 
-        protected virtual void ConfigureServices(IServiceCollection services, IEnumerable<object> arguments)
+        protected virtual void ConfigureServices(IServiceCollection services, TArgument arguments)
         {
         }
     }

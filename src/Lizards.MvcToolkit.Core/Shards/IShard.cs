@@ -1,7 +1,7 @@
 ﻿namespace Lizards.MvcToolkit.Core.Shards
 {
-    public interface IShard
+    public interface IShard<TArgument>
     {
-        void Apply<TArgument>(StartupConfigurations host, TArgument arguments);
+        void Apply(StartupConfigurations host, TArgument arguments);
     }
 }

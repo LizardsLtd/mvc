@@ -1,11 +1,10 @@
 ﻿namespace Lizards.MvcToolkit.Core.Shards.Defaults
 {
-    using System.Collections.Generic;
     using Lizards.MvcToolkit.FeatureSlices;
 
-    public sealed class FeaturesShard : ShardBase
+    public sealed class FeaturesShard : ShardBase<object>
     {
-        public void Apply(StartupConfigurations host, IEnumerable<object> arguments)
+        public void Apply(StartupConfigurations host, object arguments)
         {
             host.MVC.Options.AddControllerConvention<FeatureConvention>();
 

@@ -1,11 +1,13 @@
 ﻿namespace Lizards.MvcToolkit.Core.Shards
 {
     using System;
+    using System.Collections.Generic;
     using Lizards.MvcToolkit.Core.Shards.Defaults;
     using Microsoft.AspNetCore.Builder;
     using Microsoft.AspNetCore.Hosting;
     using Microsoft.AspNetCore.Routing;
     using Microsoft.Extensions.Configuration;
+    using Microsoft.Extensions.DependencyInjection;
 
     public abstract class ShardedStartup
     {
@@ -49,18 +51,15 @@
             this.configuration.MVC.Use(app);
         }
 
-        //public void ApplyDefault<TDefault>(params object[] arguments)
-        //        where TDefault : ShardBase, new()
-        //    => this.ApplyDefault(new TDefault(), arguments);
         public void ApplyDefault<TDefault>()
-               where TDefault : ShardBase, new()
+               where TDefault : IShard<object>, new()
            => this.ApplyDefault<TDefault, object>(new object());
 
         public void ApplyDefault<TDefault, TArgument>(TArgument arguments)
-                where TDefault : IShard, new()
+                where TDefault : IShard<TArgument>, new()
             => this.ApplyDefault(new TDefault(), arguments);
 
-        public void ApplyDefault<TArgument>(IShard @default, TArgument arguments)
+        public void ApplyDefault<TArgument>(IShard<TArgument> @default, TArgument arguments)
         {
             this.configuration.Apply(@default, arguments);
         }
@@ -91,7 +90,7 @@
             this.ApplyDefault<UseStaticFiles>();
             this.ApplyDefault<DevelopmentSetup>();
 
-            this.ApplyDefault<RouteShard, Action<IRouteBuilder>[]>(this.Routes);
+            this.ApplyDefault<RouteShard, IEnumerable<Action<IRouteBuilder>>>(this.Routes);
         }
     }
 }

@@ -5,7 +5,7 @@
     using Microsoft.AspNetCore.Builder;
     using Microsoft.AspNetCore.Hosting;
 
-    public sealed class MiddlewareShard<TMiddleware> : ShardBase
+    public sealed class MiddlewareShard<TMiddleware> : ShardBase<IEnumerable<object>>
     {
         protected override void ConfigureApp(
                 IApplicationBuilder app
