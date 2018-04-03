@@ -1,11 +1,11 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Hosting;
-
-namespace Lizards.MvcToolkit.Configuration.Defaults
+﻿namespace Lizards.MvcToolkit.Core.Shards.Defaults
 {
-    public sealed class MiddlewareDefault<TMiddleware> : BasicDefault
+    using System.Collections.Generic;
+    using System.Linq;
+    using Microsoft.AspNetCore.Builder;
+    using Microsoft.AspNetCore.Hosting;
+
+    public sealed class MiddlewareDefault<TMiddleware> : ShardBase
     {
         protected override void ConfigureApp(
                 IApplicationBuilder app

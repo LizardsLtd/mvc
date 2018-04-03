@@ -1,11 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using Microsoft.AspNetCore.Routing;
-
-namespace Lizards.MvcToolkit.Configuration.Defaults
+﻿namespace Lizards.MvcToolkit.Core.Shards.Defaults
 {
-    public sealed class RouteDefault : IDefault
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using Microsoft.AspNetCore.Routing;
+
+    public sealed class RouteDefault : IShard
     {
         public void Apply(StartupConfigurations host, IEnumerable<object> arguments)
             => arguments

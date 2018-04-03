@@ -1,10 +1,10 @@
-﻿using System.Collections.Generic;
-using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Hosting;
-
-namespace Lizards.MvcToolkit.Configuration.Defaults
+﻿namespace Lizards.MvcToolkit.Core.Shards.Defaults
 {
-    public sealed class UseStaticFiles : BasicDefault
+    using System.Collections.Generic;
+    using Microsoft.AspNetCore.Builder;
+    using Microsoft.AspNetCore.Hosting;
+
+    public sealed class UseStaticFiles : ShardBase
     {
         protected override void ConfigureApp(
                 IApplicationBuilder app

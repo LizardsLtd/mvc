@@ -1,9 +1,9 @@
-﻿using System.Collections.Generic;
-using Microsoft.AspNetCore.Mvc.ModelBinding;
-
-namespace Lizards.MvcToolkit.Configuration.Defaults
+﻿namespace Lizards.MvcToolkit.Core.Shards.Defaults
 {
-    public sealed class ModelBinderDefault<TBindedType, TModelBinder> : IDefault
+    using System.Collections.Generic;
+    using Microsoft.AspNetCore.Mvc.ModelBinding;
+
+    public sealed class ModelBinderDefault<TBindedType, TModelBinder> : IShard
         where TModelBinder : IModelBinder, new()
     {
         public void Apply(StartupConfigurations host, IEnumerable<object> arguments)

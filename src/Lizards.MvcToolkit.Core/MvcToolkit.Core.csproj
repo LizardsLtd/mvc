@@ -40,15 +40,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="Shards\Defaults\BasicDefault.cs" />
-    <Compile Remove="Shards\Defaults\DependencyInjectionDefault.cs" />
-    <Compile Remove="Shards\Defaults\DevelopmentSetup.cs" />
-    <Compile Remove="Shards\Defaults\FeaturesDefaults.cs" />
     <Compile Remove="Shards\Defaults\IDefault.cs" />
-    <Compile Remove="Shards\Defaults\MiddlewareDefault.cs" />
-    <Compile Remove="Shards\Defaults\ModelBinderDefault.cs" />
-    <Compile Remove="Shards\Defaults\OptionsDefault.cs" />
-    <Compile Remove="Shards\Defaults\RouteDefault.cs" />
-    <Compile Remove="Shards\Defaults\UseStaticFiles.cs" />
     <Compile Remove="CultureInfoExtension.cs" />
     <Compile Remove="IdentityErrorExtension.cs" />
   </ItemGroup>
@@ -77,8 +69,5 @@
     <PackageReference Include="Microsoft.Extensions.Identity.Core" Version="2.0.1" />
     <PackageReference Include="Microsoft.Extensions.Localization.Abstractions" Version="2.0.1" />
     <PackageReference Include="NLog" Version="4.5.0-rc06" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Shards\Defaults\" />
   </ItemGroup>
 </Project>

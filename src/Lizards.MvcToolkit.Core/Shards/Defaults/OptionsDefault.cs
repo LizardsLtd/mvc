@@ -1,10 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-
-namespace Lizards.MvcToolkit.Configuration.Defaults
+﻿namespace Lizards.MvcToolkit.Core.Shards.Defaults
 {
-    public sealed class OptionsDefault<TOptions> : IDefault
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+
+    public sealed class OptionsDefault<TOptions> : IShard
         where TOptions : class
     {
         public void Apply(StartupConfigurations host, IEnumerable<object> arguments)

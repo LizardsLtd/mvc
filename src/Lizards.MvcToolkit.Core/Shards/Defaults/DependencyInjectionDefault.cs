@@ -1,11 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using Microsoft.Extensions.DependencyInjection;
-
-namespace Lizards.MvcToolkit.Configuration.Defaults
+﻿namespace Lizards.MvcToolkit.Core.Shards.Defaults
 {
-    public sealed class DependencyInjectionDefault : BasicDefault
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using Lizards.MvcToolkit.Core.Shards;
+    using Microsoft.Extensions.DependencyInjection;
+
+    public sealed class DependencyInjectionDefault : ShardBase
     {
         private readonly List<Action<IServiceCollection>> configurationActions;
 
