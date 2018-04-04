@@ -14,7 +14,7 @@
             : this(new Lazy<TOption>(optionsFactory)) { }
 
         public ExtendednShardBase(TOption options)
-            : this(new Lazy<TOption>(() => options)) { }
+            : this(new Lazy<TOption>(()=> options)) { }
 
         public ExtendednShardBase(Lazy<TOption> options)
         {
@@ -32,7 +32,7 @@
 
             this.Configure();
             host.ASP.Add((app, env) => this.ConfigureApp(app, env, this.options.Value));
-            host.Services.Add(services => this.ConfigureServices(services, this.options.Value));
+            host.Services.Add(services => this.ConfigureServices(services,, this.options.Value));
         }
 
         protected virtual void Configure()
