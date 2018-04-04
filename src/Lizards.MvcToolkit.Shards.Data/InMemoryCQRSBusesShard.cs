@@ -8,7 +8,7 @@
     /// <summary>
     ///
     /// </summary>
-    public sealed class InMemoryCQRSBusesShard : ArgumentLessShardBase
+    public sealed class InMemoryCQRSBusesShard : ExtendednShardBase
     {
         protected override void ConfigureServices(IServiceCollection services)
         {
