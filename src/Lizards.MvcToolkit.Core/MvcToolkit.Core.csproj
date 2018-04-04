@@ -19,6 +19,7 @@
     <Compile Remove="ModelBinder\**" />
     <Compile Remove="ModelValidators\**" />
     <Compile Remove="Navigation\**" />
+    <Compile Remove="Shards\Defaults\**" />
     <Compile Remove="System.ComponentModel.DataAnnotations\**" />
     <Compile Remove="View\**" />
     <EmbeddedResource Remove="Microsoft.AspNetCore.Builder\**" />
@@ -27,6 +28,7 @@
     <EmbeddedResource Remove="ModelBinder\**" />
     <EmbeddedResource Remove="ModelValidators\**" />
     <EmbeddedResource Remove="Navigation\**" />
+    <EmbeddedResource Remove="Shards\Defaults\**" />
     <EmbeddedResource Remove="System.ComponentModel.DataAnnotations\**" />
     <EmbeddedResource Remove="View\**" />
     <None Remove="Microsoft.AspNetCore.Builder\**" />
@@ -35,12 +37,11 @@
     <None Remove="ModelBinder\**" />
     <None Remove="ModelValidators\**" />
     <None Remove="Navigation\**" />
+    <None Remove="Shards\Defaults\**" />
     <None Remove="System.ComponentModel.DataAnnotations\**" />
     <None Remove="View\**" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Remove="Shards\Defaults\BasicDefault.cs" />
-    <Compile Remove="Shards\Defaults\IDefault.cs" />
     <Compile Remove="CultureInfoExtension.cs" />
     <Compile Remove="IdentityErrorExtension.cs" />
   </ItemGroup>
@@ -51,6 +52,15 @@
     <Compile Include="Microsoft.Extensions.DependencyInjection\TypeFiler.cs" />
     <Compile Include="Microsoft.Extensions.DependencyInjection\TypeQuery.cs" />
     <Compile Include="ModelBinder\ModelBinderProvider.cs" />
+    <Compile Include="Shards\Defaults\DependencyInjectionShard.cs" />
+    <Compile Include="Shards\Defaults\DevelopmentSetup.cs" />
+    <Compile Include="Shards\Defaults\FeaturesShard.cs" />
+    <Compile Include="Shards\Defaults\MiddlewareShard.cs" />
+    <Compile Include="Shards\Defaults\ModelBinderShard.cs" />
+    <Compile Include="Shards\Defaults\MvcRouteConfigurationShard.cs" />
+    <Compile Include="Shards\Defaults\OptionsShard.cs" />
+    <Compile Include="Shards\Defaults\UseStaticFiles.cs" />
+    <Compile Include="Shards\Defaults\WebpackShard.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="..\..\stylecop.json" Link="stylecop.json" />

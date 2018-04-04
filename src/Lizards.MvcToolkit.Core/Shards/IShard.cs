@@ -4,8 +4,4 @@
     {
         void Apply(StartupConfigurations host);
     }
-
-    public interface IConfigurableShard<TConfiguration>: IShard
-    {
-    }
 }
