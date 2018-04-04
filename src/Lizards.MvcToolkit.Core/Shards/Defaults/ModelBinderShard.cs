@@ -3,7 +3,7 @@
     using System.Collections.Generic;
     using Microsoft.AspNetCore.Mvc.ModelBinding;
 
-    public sealed class ModelBinderShard<TBindedType, TModelBinder> : IShard<IEnumerable<object>>
+    public sealed class ModelBinderShard<TBindedType, TModelBinder> : IConfigurableShard<IEnumerable<object>>
         where TModelBinder : IModelBinder, new()
     {
         public void Apply(StartupConfigurations host, IEnumerable<object> arguments)

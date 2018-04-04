@@ -33,11 +33,10 @@
 
         public IConfiguration Configuration { get; }
 
-        internal void Apply<TDefault, TArgument>(TArgument arguments)
-                where TDefault : IShard<TArgument>, new()
-            => this.Apply(new TDefault(), arguments);
+        internal void Apply<TDefault>() where TDefault : IShard, new()
+            => this.Apply(new TDefault());
 
-        internal void Apply<TArgument>(IShard<TArgument> @default, TArgument argument)
-            => @default.Apply(this, argument);
+        internal void Apply(IShard @default)
+            => @default.Apply(this);
     }
 }

@@ -12,7 +12,7 @@
     /// <summary>
     /// Automatic registration of all CQRS required items
     /// </summary>
-    public sealed class CQRSShard : ShardBase<IEnumerable<string>>
+    public sealed class CQRSShard : ExtendednShardBase<IEnumerable<string>>
     {
         protected override void ConfigureApp(IApplicationBuilder app, IHostingEnvironment env, IEnumerable<string> arguments)
             => app

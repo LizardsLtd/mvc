@@ -3,7 +3,7 @@
     using Microsoft.AspNetCore.Builder;
     using Microsoft.AspNetCore.Hosting;
 
-    public sealed class DevelopmentSetup : ArgumentLessShardBase
+    public sealed class DevelopmentSetup : ExtendednShardBase
     {
         protected override void ConfigureApp(IApplicationBuilder app, IHostingEnvironment env)
         {

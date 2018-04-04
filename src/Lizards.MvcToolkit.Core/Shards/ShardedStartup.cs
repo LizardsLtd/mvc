@@ -52,16 +52,12 @@
         }
 
         public void ApplyDefault<TDefault>()
-               where TDefault : IShard<object>, new()
-           => this.ApplyDefault<TDefault, object>(new object());
+               where TDefault : IShard, new()
+           => this.ApplyDefault(new TDefault());
 
-        public void ApplyDefault<TDefault, TArgument>(TArgument arguments)
-                where TDefault : IShard<TArgument>, new()
-            => this.ApplyDefault(new TDefault(), arguments);
-
-        public void ApplyDefault<TArgument>(IShard<TArgument> @default, TArgument arguments)
+        public void ApplyDefault(IShard @default)
         {
-            this.configuration.Apply(@default, arguments);
+            this.configuration.Apply(@default);
         }
 
         protected virtual void AddConfigurationBuilderDetails(ConfigurationBuilder provider)
@@ -84,7 +80,7 @@
             };
 
         protected BasicShardedStartup(IHostingEnvironment env, IConfiguration configuration)
-                            : base(env, configuration)
+            : base(env, configuration)
         {
             this.ApplyDefault<FeaturesShard>();
             this.ApplyDefault<UseStaticFiles>();

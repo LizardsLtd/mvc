@@ -2,9 +2,9 @@
 {
     using Lizards.MvcToolkit.FeatureSlices;
 
-    public sealed class FeaturesShard : ShardBase<object>
+    public sealed class FeaturesShard : ExtendednShardBase
     {
-        public void Apply(StartupConfigurations host, object arguments)
+        public void Apply(StartupConfigurations host)
         {
             host.MVC.Options.AddControllerConvention<FeatureConvention>();
 
