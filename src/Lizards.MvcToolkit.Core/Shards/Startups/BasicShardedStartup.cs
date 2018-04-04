@@ -1,4 +1,5 @@
 ﻿namespace Lizards.MvcToolkit.Core.Shards
+
 {
     using System;
     using System.Collections.Generic;
@@ -10,18 +11,6 @@
 
     public abstract class BasicShardedStartup : ShardedStartup
     {
-        public Action<IRouteBuilder>[] Routes =
-            new Action<IRouteBuilder>[]
-            {
-                routes => routes.MapRoute(
-                            name: "default",
-                            template: "{controller=Home}/{action=Index}/{id?}"),
-
-                routes => routes.MapSpaFallbackRoute(
-                            name: "spa-fallback",
-                            defaults: new { controller = "Home", action = "Index" }),
-            };
-
         protected BasicShardedStartup(IHostingEnvironment env, IConfiguration configuration)
             : base(env, configuration)
         {
@@ -29,7 +18,14 @@
             this.ApplyDefault<UseStaticFiles>();
             this.ApplyDefault<DevelopmentSetup>();
 
-            this.ApplyDefault<RouteShard, IEnumerable<Action<IRouteBuilder>>>(this.Routes);
+            this.ApplyDefault(new MvcRouteConfigurationShard(this.GetRoutes()));
+        }
+
+        public virtual IEnumerable<Action<IRouteBuilder>> GetRoutes()
+        {
+            yield return routes => routes.MapRoute(
+                            name: "default",
+                            template: "{controller=Home}/{action=Index}/{id?}"),
         }
     }
 }
