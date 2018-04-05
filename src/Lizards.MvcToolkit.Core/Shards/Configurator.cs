@@ -1,8 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace Lizards.MvcToolkit.Core.Shards
+﻿namespace Lizards.MvcToolkit.Core.Shards
 {
+    using System;
+    using System.Collections.Generic;
+
     public sealed class Configurator<TAction>
     {
         private readonly List<Action<TAction>> templates;

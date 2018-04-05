@@ -1,8 +1,8 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Filters;
-
-namespace Lizards.MvcToolkit.Core.Shards
+﻿namespace Lizards.MvcToolkit.Core.Shards
 {
+    using Microsoft.AspNetCore.Mvc;
+    using Microsoft.AspNetCore.Mvc.Filters;
+
     public static class MvcFilterExtension
     {
         public static Configurator<MvcOptions> AddFilterMetadata<TFilterMetadata>(this Configurator<MvcOptions> options)

@@ -1,8 +1,8 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.ModelBinding.Metadata;
-
-namespace Lizards.MvcToolkit.Core.Shards
+﻿namespace Lizards.MvcToolkit.Core.Shards
 {
+    using Microsoft.AspNetCore.Mvc;
+    using Microsoft.AspNetCore.Mvc.ModelBinding.Metadata;
+
     public static class MvcModelMetadataExtension
     {
         public static Configurator<MvcOptions> AddMetadataProvider<TMetadata>(this Configurator<MvcOptions> options)

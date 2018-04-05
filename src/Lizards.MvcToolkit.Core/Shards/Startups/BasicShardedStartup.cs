@@ -1,5 +1,4 @@
 ﻿namespace Lizards.MvcToolkit.Core.Shards
-
 {
     using System;
     using System.Collections.Generic;

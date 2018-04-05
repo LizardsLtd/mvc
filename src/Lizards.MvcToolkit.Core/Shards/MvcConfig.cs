@@ -1,10 +1,10 @@
-﻿using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Routing;
-using Microsoft.Extensions.DependencyInjection;
-
-namespace Lizards.MvcToolkit.Core.Shards
+﻿namespace Lizards.MvcToolkit.Core.Shards
 {
+    using Microsoft.AspNetCore.Builder;
+    using Microsoft.AspNetCore.Mvc;
+    using Microsoft.AspNetCore.Routing;
+    using Microsoft.Extensions.DependencyInjection;
+
     public sealed class MvcConfig
     {
         public MvcConfig()

@@ -1,9 +1,9 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.ApplicationModels;
-using Microsoft.Extensions.DependencyInjection;
-
-namespace Lizards.MvcToolkit.Core.Shards
+﻿namespace Lizards.MvcToolkit.Core.Shards
 {
+    using Microsoft.AspNetCore.Mvc;
+    using Microsoft.AspNetCore.Mvc.ApplicationModels;
+    using Microsoft.Extensions.DependencyInjection;
+
     public static class MvcConventionExtension
     {
         public static Configurator<MvcOptions> AddApplicationConvention<T>(this Configurator<MvcOptions> options)

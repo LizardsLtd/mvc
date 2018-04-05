@@ -1,10 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using Microsoft.AspNetCore.Mvc.Razor;
-using Microsoft.Extensions.DependencyInjection;
-
-namespace Lizards.MvcToolkit.Core.Shards
+﻿namespace Lizards.MvcToolkit.Core.Shards
 {
+    using System;
+    using System.Collections.Generic;
+    using Microsoft.AspNetCore.Mvc.Razor;
+    using Microsoft.Extensions.DependencyInjection;
+
     public sealed class RazorConfig
     {
         private readonly List<Action<RazorViewEngineOptions>> actions;

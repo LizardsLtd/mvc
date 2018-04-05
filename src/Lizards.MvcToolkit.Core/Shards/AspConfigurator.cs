@@ -1,13 +1,13 @@
-﻿using System.Collections.Generic;
-using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Hosting;
-using ASPConfigAction
-    = System.Action
-        <Microsoft.AspNetCore.Builder.IApplicationBuilder
-        , Microsoft.AspNetCore.Hosting.IHostingEnvironment>;
-
-namespace Lizards.MvcToolkit.Core.Shards
+﻿namespace Lizards.MvcToolkit.Core.Shards
 {
+    using System.Collections.Generic;
+    using Microsoft.AspNetCore.Builder;
+    using Microsoft.AspNetCore.Hosting;
+    using ASPConfigAction
+        = System.Action
+            <Microsoft.AspNetCore.Builder.IApplicationBuilder
+            , Microsoft.AspNetCore.Hosting.IHostingEnvironment>;
+
     public sealed class AspConfigurator
     {
         private readonly List<ASPConfigAction> actions;
