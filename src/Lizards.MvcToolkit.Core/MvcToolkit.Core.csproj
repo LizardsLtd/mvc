@@ -1,9 +1,9 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <Description>ASP.NET Core MVC implementation.</Description>
-    <Copyright>Picums 2016 - 2017</Copyright>
+    <Copyright>Lizards  2016 - 2017</Copyright>
     <AssemblyTitle>MVC</AssemblyTitle>
-    <Version>0.32.0</Version>
+    <Version>0.33.0</Version>
     <WarningsAsErrors>true</WarningsAsErrors>
     <AssemblyName>Lizards.MvcToolkit.Core</AssemblyName>
   </PropertyGroup>
@@ -11,6 +11,9 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <RootNamespace>Lizards.MvcToolkit.Core</RootNamespace>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Authors>Szymon Sasin</Authors>
+    <Company>Lizards</Company>
+    <Product>ToolkitMVC</Product>
   </PropertyGroup>
   <ItemGroup>
     <Compile Remove="Microsoft.AspNetCore.Builder\**" />
@@ -53,7 +56,7 @@
     <Compile Include="Microsoft.Extensions.DependencyInjection\TypeQuery.cs" />
     <Compile Include="ModelBinder\ModelBinderProvider.cs" />
     <Compile Include="Shards\Defaults\DependencyInjectionShard.cs" />
-    <Compile Include="Shards\Defaults\DevelopmentSetup.cs" />
+    <Compile Include="Shards\Defaults\ExceptionHandlingShard.cs" />
     <Compile Include="Shards\Defaults\FeaturesShard.cs" />
     <Compile Include="Shards\Defaults\MiddlewareShard.cs" />
     <Compile Include="Shards\Defaults\ModelBinderShard.cs" />

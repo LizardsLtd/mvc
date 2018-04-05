@@ -6,7 +6,7 @@
     using Lizards.MvcToolkit.Core.Shards;
     using Microsoft.Extensions.DependencyInjection;
 
-    public sealed class DependencyInjectionShard : ExtendednShardBase
+    public sealed class DependencyInjectionShard : ShardBase
     {
         private readonly List<Action<IServiceCollection>> configurationActions;
 

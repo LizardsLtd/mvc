@@ -6,20 +6,18 @@
     using Microsoft.Extensions.Configuration;
     using Microsoft.Extensions.DependencyInjection;
 
-    public abstract class ExtendednShardBase<TOption> : IConfigurableShard<TOption>
+    public abstract class ConfigurableShardBase<TOption> : IConfigurableShard<TOption>
     {
         private readonly Lazy<TOption> options;
 
-        public ExtendednShardBase(Func<TOption> optionsFactory)
+        protected ConfigurableShardBase(Func<TOption> optionsFactory)
             : this(new Lazy<TOption>(optionsFactory)) { }
 
-        public ExtendednShardBase(TOption options)
+        protected ConfigurableShardBase(TOption options)
             : this(new Lazy<TOption>(() => options)) { }
 
-        public ExtendednShardBase(Lazy<TOption> options)
-        {
-            this.options = options;
-        }
+        protected ConfigurableShardBase(Lazy<TOption> options)
+            => this.options = options;
 
         public TOption Options => this.options.Value;
 

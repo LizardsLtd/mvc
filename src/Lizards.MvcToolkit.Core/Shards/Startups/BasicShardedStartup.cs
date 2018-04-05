@@ -16,10 +16,11 @@
         {
             this.ApplyDefault<FeaturesShard>();
             this.ApplyDefault<UseStaticFiles>();
-            this.ApplyDefault<DevelopmentSetup>();
-
+            this.ApplyDefault(new ExceptionHandlingShard(this.ExceptionHandlingRoute));
             this.ApplyDefault(new MvcRouteConfigurationShard(this.GetRoutes()));
         }
+
+        protected abstract string ExceptionHandlingRoute { get; }
 
         public virtual IEnumerable<Action<IRouteBuilder>> GetRoutes()
         {

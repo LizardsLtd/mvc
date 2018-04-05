@@ -2,7 +2,7 @@
 {
     using System;
 
-    public sealed class OptionsShard<TOptions> : IConfigurableShard<Action<TOptions>>
+    public sealed class OptionsShard<TOptions> : ConfigurableShardBase<Action<TOptions>>
         where TOptions : class
     {
         public OptionsShard(Action<TOptions> options)

@@ -5,7 +5,7 @@
     using Microsoft.Extensions.Configuration;
     using Microsoft.Extensions.DependencyInjection;
 
-    public abstract class ExtendednShardBase : IShard
+    public abstract class ShardBase : IShard
     {
         protected IConfiguration Configuration { get; private set; }
 

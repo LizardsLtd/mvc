@@ -2,7 +2,7 @@
 {
     using Lizards.MvcToolkit.FeatureSlices;
 
-    public sealed class FeaturesShard : ExtendednShardBase
+    public sealed class FeaturesShard : ShardBase
     {
         public void Apply(StartupConfigurations host)
         {
