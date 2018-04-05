@@ -2,7 +2,7 @@
 {
     using System;
 
-    public sealed class OptionsShard<TOptions> : ConfigurableShardBase<Action<TOptions>>
+    public sealed class OptionsShard<TOptions> : IConfigurableShard<Action<TOptions>>
         where TOptions : class
     {
         public OptionsShard(Action<TOptions> options)
@@ -13,8 +13,6 @@
         public Action<TOptions> Options { get; }
 
         public void Apply(StartupConfigurations host)
-        {
-            host.Services.Configure(this.Options);
-        }
+            => host.Services.Configure(this.Options);
     }
 }
