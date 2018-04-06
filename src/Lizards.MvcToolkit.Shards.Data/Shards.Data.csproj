@@ -3,12 +3,12 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp2.0</TargetFramework>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>0.30.0</Version>
-    <Authors>Picums</Authors>
-    <Company>Picums</Company>
-    <Product>Picums</Product>
+    <Version>0.1.0</Version>
+    <Authors>Szymon Sasin</Authors>
+    <Company>Lizards</Company>
+    <Product>LIzards MvcToolkit</Product>
     <Description />
-    <PackageId>Picums.Mvc.Configuration.Data</PackageId>
+    <PackageId>Lizards.MvcToolkit.Shards.Data</PackageId>
     <AssemblyName>Lizards.MvcToolkit.Shards.Data</AssemblyName>
     <RootNamespace>Lizards.MvcToolkit.Shards..Data</RootNamespace>
   </PropertyGroup>
