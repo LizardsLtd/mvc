@@ -1,8 +1,8 @@
-﻿using System;
-using Microsoft.AspNetCore.Mvc.ActionConstraints;
-
-namespace Lizards.MvcToolkit.FeatureSlices
+﻿namespace Lizards.MvcToolkit.FeatureSlices
 {
+	using System;
+	using Microsoft.AspNetCore.Mvc.ActionConstraints;
+
 	[AttributeUsage(AttributeTargets.Class)]
 	public sealed class GroupedLocationAttribute : Attribute, IActionConstraintMetadata
 	{

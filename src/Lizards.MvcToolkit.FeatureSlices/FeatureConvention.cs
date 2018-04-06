@@ -6,7 +6,6 @@
     using Microsoft.AspNetCore.Mvc.ApplicationModels;
 
     public sealed class FeatureConvention : IControllerModelConvention
-
     {
         public void Apply(ControllerModel controller)
         {

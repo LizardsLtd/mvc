@@ -1,9 +1,9 @@
-﻿using System.Collections.Generic;
-using Microsoft.AspNetCore.Mvc.Controllers;
-using Microsoft.AspNetCore.Mvc.Razor;
-
-namespace Lizards.MvcToolkit.FeatureSlices
+﻿namespace Lizards.MvcToolkit.FeatureSlices
 {
+    using System.Collections.Generic;
+    using Microsoft.AspNetCore.Mvc.Controllers;
+    using Microsoft.AspNetCore.Mvc.Razor;
+
     internal sealed class FeatureViewLocationExpander : IViewLocationExpander
     {
         public IEnumerable<string> ExpandViewLocations(
