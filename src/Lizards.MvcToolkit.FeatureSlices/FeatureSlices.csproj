@@ -5,6 +5,9 @@
     <AssemblyName>Lizards.MvcToolkit.FeatureSlices</AssemblyName>
     <RootNamespace>Lizards.MvcToolkit.FeatureSlices</RootNamespace>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Version>0.2.0</Version>
+    <Authors>Szymon Sasin</Authors>
+    <Company>Lizards</Company>
   </PropertyGroup>
 
   <ItemGroup>
