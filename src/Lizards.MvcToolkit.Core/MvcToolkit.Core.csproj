@@ -3,7 +3,7 @@
     <Description>ASP.NET Core MVC implementation.</Description>
     <Copyright>Lizards  2016 - 2017</Copyright>
     <AssemblyTitle>MVC</AssemblyTitle>
-    <Version>0.33.1</Version>
+    <Version>0.34.0</Version>
     <WarningsAsErrors>true</WarningsAsErrors>
     <AssemblyName>Lizards.MvcToolkit.Core</AssemblyName>
   </PropertyGroup>
@@ -62,6 +62,7 @@
     <Compile Include="Shards\Defaults\ModelBinderShard.cs" />
     <Compile Include="Shards\Defaults\MvcRouteConfigurationShard.cs" />
     <Compile Include="Shards\Defaults\OptionsShard.cs" />
+    <Compile Include="Shards\Defaults\ServicesShard.cs" />
     <Compile Include="Shards\Defaults\UseStaticFiles.cs" />
     <Compile Include="Shards\Defaults\WebpackShard.cs" />
   </ItemGroup>
