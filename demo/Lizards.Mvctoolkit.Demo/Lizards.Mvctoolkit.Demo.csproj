@@ -19,6 +19,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\src\Lizards.MvcToolkit.Core\MvcToolkit.Core.csproj" />
+    <ProjectReference Include="..\..\src\Lizards.MvcToolkit.Shards.Data\Shards.Data.csproj" />
   </ItemGroup>
 
 </Project>
