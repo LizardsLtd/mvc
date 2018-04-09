@@ -1,4 +1,4 @@
-module Lizards.MvcToolkit.FeatureSlices.Tests.FeatureViewLocationExpanderFixture
+module Lizards.MvcToolkit.FeatureSlices.Tests.ViewLocationFormatsUpdaterFixture
 
 open System
 open Xunit

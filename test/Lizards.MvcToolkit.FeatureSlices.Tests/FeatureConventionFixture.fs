@@ -1,9 +1,9 @@
-//module Lizards.MvcToolkit.FeatureSlices.Tests.FeatureViewLocationExpanderFixture
+module Lizards.MvcToolkit.FeatureSlices.Tests.FeatureConventionFixture
 
-//open System
-//open Xunit
-//open FsUnit.Xunit
-//open Lizards.MvcToolkit.FeatureSlices
+open System
+open Xunit
+open FsUnit.Xunit
+open Lizards.MvcToolkit.FeatureSlices
 //open Microsoft.AspNetCore.Mvc.ApplicationModels
 
 //[<Fact>]

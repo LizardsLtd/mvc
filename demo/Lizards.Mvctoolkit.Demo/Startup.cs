@@ -1,7 +1,7 @@
 namespace Lizards.Mvctoolkit.Demo
 {
-  using Lizards.MvcToolkit.Core.Shards;
-  using Lizards.MvcToolkit.Core.Shards.Defaults;
+  using Lizards.MvcToolkit.Core.Blocks;
+  using Lizards.MvcToolkit.Core.Blocks.Defaults;
   using Microsoft.AspNetCore.Hosting;
   using Microsoft.Extensions.Configuration;
 

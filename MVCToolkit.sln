@@ -16,11 +16,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{36D4F041-A
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MvcToolkit.Core", "src\Lizards.MvcToolkit.Core\MvcToolkit.Core.csproj", "{E740CB13-091B-4A68-B90D-839BBE98658F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shards.Data", "src\Lizards.MvcToolkit.Shards.Data\Shards.Data.csproj", "{E1062633-4235-4D03-ADCF-3903F35988E1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Blocks.Data", "src\Lizards.MvcToolkit.Blocks.Data\Blocks.Data.csproj", "{E1062633-4235-4D03-ADCF-3903F35988E1}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FeatureSlices", "src\Lizards.MvcToolkit.FeatureSlices\FeatureSlices.csproj", "{A7CB9528-4A25-458B-926D-FB146AEADCEC}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MvcToolkit.Defaults", "src\Lizards.MvcToolkit.DefaultShards\MvcToolkit.Defaults.csproj", "{9E5A9467-1C8A-4B81-9FE4-6C1B90525A7E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Blocks.Defaults", "src\Lizards.MvcToolkit.Blocks.Defaults\Blocks.Defaults.csproj", "{9E5A9467-1C8A-4B81-9FE4-6C1B90525A7E}"
 EndProject
 Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "Lizards.MvcToolkit.FeatureSlices.Tests", "test\Lizards.MvcToolkit.FeatureSlices.Tests\Lizards.MvcToolkit.FeatureSlices.Tests.fsproj", "{D560B056-1AB3-454F-92AB-84FCBC559C93}"
 EndProject

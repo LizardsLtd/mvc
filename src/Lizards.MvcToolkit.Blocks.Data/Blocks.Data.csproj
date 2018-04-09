@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Version>0.2.0</Version>
+    <Authors>Szymon Sasin</Authors>
+    <Company>Lizards</Company>
+    <Product>Lizards MvcToolkit</Product>
+    <Description />
+    <PackageId>Lizards.MvcToolkit.Blocks.Data</PackageId>
+    <AssemblyName>Lizards.MvcToolkit.Blocks.Data</AssemblyName>
+    <RootNamespace>Lizards.MvcToolkit.Blocks..Data</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="DataTypesDefault.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="..\..\stylecop.json" Link="stylecop.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Lizards.Data" Version="0.18.1" />
+    <PackageReference Include="NLog" Version="4.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Lizards.MvcToolkit.Core\MvcToolkit.Core.csproj" />
+  </ItemGroup>
+</Project>

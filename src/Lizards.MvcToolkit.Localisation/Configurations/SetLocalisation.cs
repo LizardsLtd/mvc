@@ -10,7 +10,7 @@ using Lizards.MvcToolkit.Localisation;
 using Lizards.MvcToolkit.Localisation.Services;
 using Lizards.MvcToolkit.Middleware;
 
-namespace Lizards.MvcToolkit.Core.Shards.Defaults
+namespace Lizards.MvcToolkit.Core.Blocks.Defaults
 {
     public sealed class SetLocalisation : BasicDefault
     {

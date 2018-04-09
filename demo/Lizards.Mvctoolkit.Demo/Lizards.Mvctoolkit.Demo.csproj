@@ -19,7 +19,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\src\Lizards.MvcToolkit.Core\MvcToolkit.Core.csproj" />
-    <ProjectReference Include="..\..\src\Lizards.MvcToolkit.Shards.Data\Shards.Data.csproj" />
+    <ProjectReference Include="..\..\src\Lizards.MvcToolkit.Blocks.Data\Blocks.Data.csproj" />
   </ItemGroup>
-
 </Project>
