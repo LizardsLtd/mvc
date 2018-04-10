@@ -5,7 +5,7 @@ namespace Lizards.Mvctoolkit.Demo
   using Microsoft.AspNetCore.Hosting;
   using Microsoft.Extensions.Configuration;
 
-  public sealed class DemoStartup : BasicBlockedStartup
+  public sealed class DemoStartup : BasicStartup
   {
     public DemoStartup(IHostingEnvironment env, IConfiguration configuration) : base(env, configuration)
     {
