@@ -3,7 +3,7 @@
     using Microsoft.AspNetCore.Builder;
     using Microsoft.AspNetCore.Hosting;
 
-    public sealed class ExceptionHandlingShard : ConfigurableShardBase<string>
+    public sealed class ExceptionHandlingShard : ConfigurationBlockWithOptionBase<string>
     {
         public ExceptionHandlingShard(string exceptionPage)
             : base(exceptionPage) { }

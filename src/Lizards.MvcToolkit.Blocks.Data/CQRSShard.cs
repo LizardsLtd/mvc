@@ -12,7 +12,7 @@ namespace Lizards.MvcToolkit.Core.Blocks.Defaults
   /// <summary>
   /// Automatic registration of all CQRS required items
   /// </summary>
-  public sealed class CQRSShard : ConfigurableShardBase<IEnumerable<string>>
+  public sealed class CQRSShard : ConfigurationBlockWithOptionBase<IEnumerable<string>>
   {
     public CQRSShard(params string[] assembliesNames)
         : base(assembliesNames) { }

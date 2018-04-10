@@ -4,7 +4,7 @@
     using Microsoft.AspNetCore.Hosting;
     using Microsoft.AspNetCore.SpaServices.Webpack;
 
-    public sealed class WebpackShard : ShardBase
+    public sealed class WebpackShard : ConfigurationBlockBase
     {
         protected override void ConfigureApp(IApplicationBuilder app, IHostingEnvironment env)
         {

@@ -8,7 +8,7 @@
     /// <summary>
     ///
     /// </summary>
-    public sealed class InMemoryCQRSBusesShard : ShardBase
+    public sealed class InMemoryCQRSBusesShard : ConfigurationBlockBase
     {
         protected override void ConfigureServices(IServiceCollection services)
         {

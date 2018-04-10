@@ -2,7 +2,7 @@ namespace Lizards.MvcToolkit.Core.Blocks.Defaults
 {
   using Lizards.MvcToolkit.FeatureSlices;
 
-  public sealed class FeaturesShard : IShard
+  public sealed class FeaturesShard : IConfigurationBlock
   {
     public void Apply(StartupConfigurations host)
     {

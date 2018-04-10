@@ -49,10 +49,10 @@
         }
 
         public void ApplyDefault<TDefault>()
-               where TDefault : IShard, new()
+               where TDefault : IConfigurationBlock, new()
            => this.ApplyDefault(new TDefault());
 
-        public void ApplyDefault(IShard @default)
+        public void ApplyDefault(IConfigurationBlock @default)
         {
             this.configuration.Apply(@default);
         }

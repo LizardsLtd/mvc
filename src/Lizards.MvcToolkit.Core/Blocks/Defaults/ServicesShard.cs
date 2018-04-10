@@ -3,7 +3,7 @@ namespace Lizards.MvcToolkit.Core.Blocks.Defaults
   using System;
   using Microsoft.Extensions.DependencyInjection;
 
-  public sealed class ServicesShard : ConfigurableShardBase<Action<IServiceCollection>>
+  public sealed class ServicesShard : ConfigurationBlockWithOptionBase<Action<IServiceCollection>>
   {
     public ServicesShard(Func<Action<IServiceCollection>> optionsFactory)
       : base(optionsFactory) { }

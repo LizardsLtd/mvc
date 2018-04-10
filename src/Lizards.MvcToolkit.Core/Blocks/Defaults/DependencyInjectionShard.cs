@@ -6,7 +6,7 @@
     using Lizards.MvcToolkit.Core.Blocks;
     using Microsoft.Extensions.DependencyInjection;
 
-    public sealed class DependencyInjectionShard : ShardBase
+    public sealed class DependencyInjectionShard : ConfigurationBlockBase
     {
         private readonly List<Action<IServiceCollection>> configurationActions;
 

@@ -33,10 +33,10 @@
 
         public IConfiguration Configuration { get; }
 
-        internal void Apply<TDefault>() where TDefault : IShard, new()
+        internal void Apply<TDefault>() where TDefault : IConfigurationBlock, new()
             => this.Apply(new TDefault());
 
-        internal void Apply(IShard @default)
+        internal void Apply(IConfigurationBlock @default)
             => @default.Apply(this);
     }
 }

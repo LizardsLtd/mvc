@@ -6,7 +6,7 @@
     using Microsoft.AspNetCore.Builder;
     using Microsoft.AspNetCore.Hosting;
 
-    public sealed class MiddlewareShard<TMiddleware> : ConfigurableShardBase<IEnumerable<object>>
+    public sealed class MiddlewareShard<TMiddleware> : ConfigurationBlockWithOptionBase<IEnumerable<object>>
     {
         public MiddlewareShard(Func<IEnumerable<object>> optionsFactory)
             : base(optionsFactory) { }
