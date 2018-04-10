@@ -9,12 +9,12 @@
     using Microsoft.AspNetCore.Routing;
     using Microsoft.Extensions.Configuration;
 
-    public abstract class WebpackStartup : BasicShardedStartup
+    public abstract class WebpackStartup : BasicBlockedStartup
     {
         protected WebpackStartup(IHostingEnvironment env, IConfiguration configuration)
             : base(env, configuration)
         {
-            this.ApplyDefault<WebpackShard>();
+            this.ApplyDefault<WebpackBlock>();
         }
 
         public override IEnumerable<Action<IRouteBuilder>> GetRoutes()

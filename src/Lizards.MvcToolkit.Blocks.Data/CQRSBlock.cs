@@ -12,9 +12,9 @@ namespace Lizards.MvcToolkit.Core.Blocks.Defaults
   /// <summary>
   /// Automatic registration of all CQRS required items
   /// </summary>
-  public sealed class CQRSShard : ConfigurationBlockWithOptionBase<IEnumerable<string>>
+  public sealed class CQRSBlock : ConfigurationBlockWithOptionBase<IEnumerable<string>>
   {
-    public CQRSShard(params string[] assembliesNames)
+    public CQRSBlock(params string[] assembliesNames)
         : base(assembliesNames) { }
 
     protected override void ConfigureApp(IApplicationBuilder app, IHostingEnvironment env, IEnumerable<string> assembliesNames)

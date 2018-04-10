@@ -6,11 +6,11 @@
     using Microsoft.Extensions.Configuration;
     using Microsoft.Extensions.DependencyInjection;
 
-    public abstract class ShardedStartup
+    public abstract class BlockedStartup
     {
         private readonly StartupConfigurations configuration;
 
-        protected ShardedStartup(IHostingEnvironment env, IConfiguration configuration)
+        protected BlockedStartup(IHostingEnvironment env, IConfiguration configuration)
         {
             this.configuration = new StartupConfigurations(env, configuration);
         }
@@ -19,7 +19,7 @@
 
         public IHostingEnvironment Environment => this.configuration.Environment;
 
-        public ShardedStartup ConfigureOptions<TOption>(Action<TOption> configure)
+        public BlockedStartup ConfigureOptions<TOption>(Action<TOption> configure)
             where TOption : class
         {
             this.configuration.Services.Configure(configure);
@@ -27,7 +27,7 @@
             return this;
         }
 
-        public ShardedStartup ConfigureOptions<TOption>(Action<IConfiguration, TOption> configure)
+        public BlockedStartup ConfigureOptions<TOption>(Action<IConfiguration, TOption> configure)
             where TOption : class
         {
             this.configuration.Services.Configure<TOption>(options => configure(this.Configuration, options));

@@ -2,10 +2,10 @@
 {
     using System;
 
-    public sealed class OptionsShard<TOptions> : IConfigurationBlockWithOption<Action<TOptions>>
+    public sealed class OptionsBlock<TOptions> : IConfigurationBlockWithOption<Action<TOptions>>
         where TOptions : class
     {
-        public OptionsShard(Action<TOptions> options)
+        public OptionsBlock(Action<TOptions> options)
         {
             this.Options = options;
         }

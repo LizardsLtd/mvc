@@ -8,15 +8,15 @@
     using Microsoft.AspNetCore.Routing;
     using Microsoft.Extensions.Configuration;
 
-    public abstract class BasicShardedStartup : ShardedStartup
+    public abstract class BasicBlockedStartup : BlockedStartup
     {
-        protected BasicShardedStartup(IHostingEnvironment env, IConfiguration configuration)
+        protected BasicBlockedStartup(IHostingEnvironment env, IConfiguration configuration)
             : base(env, configuration)
         {
-            this.ApplyDefault<FeaturesShard>();
-            this.ApplyDefault<UseStaticFiles>();
-            this.ApplyDefault(new ExceptionHandlingShard(this.ExceptionHandlingRoute));
-            this.ApplyDefault(new MvcRouteConfigurationShard(this.GetRoutes()));
+            this.ApplyDefault<FeaturesBlock>();
+            this.ApplyDefault<UseStaticFilesBlock>();
+            this.ApplyDefault(new ExceptionHandlingBlock(this.ExceptionHandlingRoute));
+            this.ApplyDefault(new MvcRouteConfigurationBlock(this.GetRoutes()));
         }
 
         protected abstract string ExceptionHandlingRoute { get; }

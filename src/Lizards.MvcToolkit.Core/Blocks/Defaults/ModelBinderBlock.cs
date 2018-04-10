@@ -2,7 +2,7 @@
 {
     using Microsoft.AspNetCore.Mvc.ModelBinding;
 
-    public sealed class ModelBinderShard<TBindedType, TModelBinder> : IConfigurationBlock
+    public sealed class ModelBinderBlock<TBindedType, TModelBinder> : IConfigurationBlock
         where TModelBinder : IModelBinder, new()
     {
         public void Apply(StartupConfigurations host)

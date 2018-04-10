@@ -5,9 +5,9 @@
     using System.Linq;
     using Microsoft.AspNetCore.Routing;
 
-    public sealed class MvcRouteConfigurationShard : IConfigurationBlockWithOption<IEnumerable<Action<IRouteBuilder>>>
+    public sealed class MvcRouteConfigurationBlock : IConfigurationBlockWithOption<IEnumerable<Action<IRouteBuilder>>>
     {
-        public MvcRouteConfigurationShard(IEnumerable<Action<IRouteBuilder>> options)
+        public MvcRouteConfigurationBlock(IEnumerable<Action<IRouteBuilder>> options)
         {
             this.Options = options;
         }
