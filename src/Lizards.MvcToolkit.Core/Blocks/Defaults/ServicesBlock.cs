@@ -5,7 +5,7 @@ namespace Lizards.MvcToolkit.Core.Blocks.Defaults
 
   public sealed class ServicesBlock : ConfigurationBlockWithOptionBase<Action<IServiceCollection>>
   {
-    public ServicesBlock(Func<Action<IServiceCollection>> optionsFactory)
+    public ServicesBlock(Action<IServiceCollection> optionsFactory)
       : base(optionsFactory) { }
 
     protected override void ConfigureServices(IServiceCollection services, Action<IServiceCollection> options)
