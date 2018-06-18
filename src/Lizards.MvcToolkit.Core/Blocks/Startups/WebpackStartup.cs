@@ -9,24 +9,20 @@ namespace Lizards.MvcToolkit.Core.Blocks
   using Microsoft.AspNetCore.Routing;
   using Microsoft.Extensions.Configuration;
 
-  public abstract class WebpackStartup : BasicStartup
+  public abstract class WebpackStartup : IConfigurationBlock
   {
-    protected WebpackStartup(IHostingEnvironment env, IConfiguration configuration)
-        : base(env, configuration)
+    public void Apply(StartupConfigurations host)
     {
-      this.ApplyDefault<WebpackBlock>();
+      host.Apply(new MvcRouteConfigurationBlock(this.GetRoutes()));
+      host.Apply<WebpackBlock>();
     }
 
-    public override IEnumerable<Action<IRouteBuilder>> GetRoutes()
+    private IEnumerable<Action<IRouteBuilder>> GetRoutes()
     {
-      var routes = new Action<IRouteBuilder>[]
-      {
-                r => r.MapSpaFallbackRoute(
-                    name: "spa-fallback",
-                    defaults: new { controller = "Home", action = "Index" }),
-      };
-
-      return base.GetRoutes().Union(routes);
+      yield return routes
+        => routes.MapSpaFallbackRoute(
+            name: "spa-fallback",
+            defaults: new { controller = "Home", action = "Index" });
     }
   }
 }
