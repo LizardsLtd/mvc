@@ -7,14 +7,27 @@ namespace Lizards.MvcToolkit.Core.Blocks
   using Microsoft.AspNetCore.Builder;
   using Microsoft.AspNetCore.Hosting;
   using Microsoft.AspNetCore.Routing;
+  using Microsoft.AspNetCore.SpaServices.Webpack;
   using Microsoft.Extensions.Configuration;
 
-  public abstract class WebpackStartup : IConfigurationBlock
+  public sealed class WebpackBlock : IConfigurationBlock
   {
     public void Apply(StartupConfigurations host)
     {
       host.Apply(new MvcRouteConfigurationBlock(this.GetRoutes()));
-      host.Apply<WebpackBlock>();
+
+      host.ASP.Add(this.ConfigureApp);
+    }
+
+    private void ConfigureApp(IApplicationBuilder app, IHostingEnvironment env)
+    {
+      if (env.IsDevelopment())
+      {
+        app.UseWebpackDevMiddleware(new WebpackDevMiddlewareOptions
+        {
+          HotModuleReplacement = true,
+        });
+      }
     }
 
     private IEnumerable<Action<IRouteBuilder>> GetRoutes()
