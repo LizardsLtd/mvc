@@ -5,13 +5,13 @@
     <AssemblyName>Lizards.MvcToolkit.FeatureSlices</AssemblyName>
     <RootNamespace>Lizards.MvcToolkit.FeatureSlices</RootNamespace>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>0.2.0</Version>
+    <Version>0.37.0</Version>
     <Authors>Szymon Sasin</Authors>
     <Company>Lizards</Company>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.Mvc.Abstractions" Version="2.0.3" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Abstractions" Version="2.1.1" />
   </ItemGroup>
 
   <ItemGroup>

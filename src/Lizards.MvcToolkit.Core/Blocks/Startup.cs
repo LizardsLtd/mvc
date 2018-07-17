@@ -5,24 +5,27 @@ namespace Lizards.MvcToolkit.Core.Blocks
   using Microsoft.AspNetCore.Hosting;
   using Microsoft.Extensions.Configuration;
   using Microsoft.Extensions.DependencyInjection;
+  using SimpleInjector;
 
   public abstract class Startup
   {
-    private readonly StartupConfigurations configuration;
+    private readonly Container container;
+    private readonly StartupConfigurations startupConfiguration;
 
     protected Startup(IHostingEnvironment env, IConfiguration configuration)
     {
-      this.configuration = new StartupConfigurations(env, configuration);
+      this.startupConfiguration = new StartupConfigurations(env, configuration);
+      this.container = new Container();
     }
 
-    public IConfiguration Configuration => this.configuration.Configuration;
+    public IConfiguration Configuration => this.startupConfiguration.Configuration;
 
-    public IHostingEnvironment Environment => this.configuration.Environment;
+    public IHostingEnvironment Environment => this.startupConfiguration.Environment;
 
     public Startup ConfigureOptions<TOption>(Action<TOption> configure)
         where TOption : class
     {
-      this.configuration.Services.Configure(configure);
+      this.startupConfiguration.Services.Configure(configure);
 
       return this;
     }
@@ -30,22 +33,27 @@ namespace Lizards.MvcToolkit.Core.Blocks
     public Startup ConfigureOptions<TOption>(Action<IConfiguration, TOption> configure)
         where TOption : class
     {
-      this.configuration.Services.Configure<TOption>(options => configure(this.Configuration, options));
+      this.startupConfiguration.Services.Configure<TOption>(options => configure(this.Configuration, options));
 
       return this;
     }
 
     public void ConfigureServices(IServiceCollection services)
     {
-      this.configuration.MVC.AddMvc(services);
-      this.configuration.Razor.Use(services);
-      this.configuration.Services.Use(services);
+      this.startupConfiguration.IntegrateSimpleInjector(services);
+      this.startupConfiguration.MVC.AddMvc(services);
+      this.startupConfiguration.Razor.Use(services);
+      this.startupConfiguration.Services.Use(services);
     }
 
     public void Configure(IApplicationBuilder app)
     {
-      this.configuration.ASP.Use(app, this.Environment);
-      this.configuration.MVC.Use(app);
+      this.startupConfiguration.InitializeContainerWithinApplicationBuilder(app);
+
+      this.startupConfiguration.ASP.Use(app, this.Environment);
+      this.startupConfiguration.MVC.Use(app);
+
+      container.Verify();
     }
 
     public void ApplyDefault<TDefault>()
@@ -54,7 +62,7 @@ namespace Lizards.MvcToolkit.Core.Blocks
 
     public void ApplyDefault(IConfigurationBlock @default)
     {
-      this.configuration.Apply(@default);
+      this.startupConfiguration.Apply(@default);
     }
 
     protected virtual void AddConfigurationBuilderDetails(ConfigurationBuilder provider)
