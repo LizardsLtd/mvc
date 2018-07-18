@@ -25,6 +25,7 @@ namespace Lizards.MvcToolkit.Core.Blocks
       this.Razor = new RazorConfig();
       this.Services = new ServicesConfigurator();
       this.Container = new Container();
+      this.Container.Options.DefaultScopedLifestyle = new AsyncScopedLifestyle();
       this.Environment = environment;
       this.Configuration = configuration;
     }
@@ -57,8 +58,6 @@ namespace Lizards.MvcToolkit.Core.Blocks
 
     internal void IntegrateSimpleInjector(IServiceCollection services)
     {
-      this.Container.Options.DefaultScopedLifestyle = new AsyncScopedLifestyle();
-
       services.AddSingleton<IControllerActivator>(
         new SimpleInjectorControllerActivator(this.Container));
       services.AddSingleton<IViewComponentActivator>(
