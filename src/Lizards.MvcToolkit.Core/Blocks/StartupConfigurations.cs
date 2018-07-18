@@ -73,7 +73,7 @@ namespace Lizards.MvcToolkit.Core.Blocks
     private Container CreateContainer()
     {
       var container = new Container();
-      this.Container.Options.DefaultScopedLifestyle = new AsyncScopedLifestyle();
+      container.Options.DefaultScopedLifestyle = new AsyncScopedLifestyle();
 
       return container;
     }

@@ -3,7 +3,7 @@ module Lizards.MvcToolkit.FeatureSlices.Tests.GroupedLocationAttributeFixture
 open System
 open Xunit
 open FsUnit.Xunit
-open Lizards.MvcToolkit.FeatureSlices
+open Lizards.MvcToolkit.Core.FeatureSlices
 
 [<Fact>]
 let ``Can set group name`` () =
