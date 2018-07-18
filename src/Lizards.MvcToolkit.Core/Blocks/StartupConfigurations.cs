@@ -64,6 +64,8 @@ namespace Lizards.MvcToolkit.Core.Blocks
       services.AddSingleton<IViewComponentActivator>(
           new SimpleInjectorViewComponentActivator(this.Container));
 
+      services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+
       services.EnableSimpleInjectorCrossWiring(this.Container);
       services.UseSimpleInjectorAspNetRequestScoping(this.Container);
     }
@@ -72,7 +74,6 @@ namespace Lizards.MvcToolkit.Core.Blocks
     {
       var container = new Container();
       this.Container.Options.DefaultScopedLifestyle = new AsyncScopedLifestyle();
-      container.Register<IHttpContextAccessor, HttpContextAccessor>();
 
       return container;
     }
