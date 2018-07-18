@@ -2,6 +2,7 @@ namespace Lizards.MvcToolkit.Core.Blocks
 {
   using Microsoft.AspNetCore.Builder;
   using Microsoft.AspNetCore.Hosting;
+  using Microsoft.AspNetCore.Http;
   using Microsoft.AspNetCore.Mvc.Controllers;
   using Microsoft.AspNetCore.Mvc.ViewComponents;
   using Microsoft.Extensions.Configuration;
@@ -24,8 +25,7 @@ namespace Lizards.MvcToolkit.Core.Blocks
       this.ASP = new AspConfigurator();
       this.Razor = new RazorConfig();
       this.Services = new ServicesConfigurator();
-      this.Container = new Container();
-      this.Container.Options.DefaultScopedLifestyle = new AsyncScopedLifestyle();
+      this.Container = CreateContainer();
       this.Environment = environment;
       this.Configuration = configuration;
     }
@@ -37,6 +37,7 @@ namespace Lizards.MvcToolkit.Core.Blocks
     public RazorConfig Razor { get; }
 
     public ServicesConfigurator Services { get; }
+
     public Container Container { get; }
 
     public IHostingEnvironment Environment { get; }
@@ -65,6 +66,15 @@ namespace Lizards.MvcToolkit.Core.Blocks
 
       services.EnableSimpleInjectorCrossWiring(this.Container);
       services.UseSimpleInjectorAspNetRequestScoping(this.Container);
+    }
+
+    private Container CreateContainer()
+    {
+      var container = new Container();
+      this.Container.Options.DefaultScopedLifestyle = new AsyncScopedLifestyle();
+      container.Register<IHttpContextAccessor, HttpContextAccessor>();
+
+      return container;
     }
   }
 }
