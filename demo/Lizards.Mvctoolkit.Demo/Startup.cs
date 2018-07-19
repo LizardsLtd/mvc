@@ -25,6 +25,7 @@ namespace Lizards.Mvctoolkit.Demo
       this.ApplyDefault(new BasicAspNetBlock(this.ExceptionHandlingRoute));
       this.ApplyDefault(new CQRSBlock("Lizards.Mvctoolkit.Demo"));
       this.ApplyDefault<RegisterServiceBlock<IService, Service>>();
+      this.ApplyDefault<HttpClientFactoryBlock>();
     }
 
     /// <summary>Gets the exception handling route.</summary>
