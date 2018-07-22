@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <Description>ASP.NET Core MVC implementation.</Description>
     <Copyright>Lizards  2016 - 2017</Copyright>
@@ -6,6 +6,7 @@
     <Version>0.39.0</Version>
     <WarningsAsErrors>true</WarningsAsErrors>
     <AssemblyName>Lizards.MvcToolkit.Core</AssemblyName>
+    <ProjectGuid>549F923E-49E6-456D-B609-BD92B04A3AC2</ProjectGuid>
   </PropertyGroup>
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
