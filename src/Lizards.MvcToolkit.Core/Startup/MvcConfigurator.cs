@@ -22,8 +22,6 @@ namespace Lizards.MvcToolkit.Core.Startup
       var mvcBuilder = services
           .AddMvc(CreateMvcOptions)
           .AddViewLocalization();
-
-      //services.AddSingleton(AddNavigationItems(services, mvcBuilder));
     }
 
     internal void Use(IApplicationBuilder app)
@@ -33,13 +31,5 @@ namespace Lizards.MvcToolkit.Core.Startup
 
     private void CreateMvcOptions(MvcOptions options)
         => this.Options.Execute(options);
-
-    //private NavigationItems AddNavigationItems(IServiceCollection services, IMvcBuilder mvcBuilder)
-    //{
-    //    var navigationItems = new NavigationItems();
-
-    //    this.Options.AddApplicationConvention(new NavigationCreationConvention(navigationItems));
-    //    return navigationItems;
-    //}
   }
 }
