@@ -1,9 +1,9 @@
-namespace Lizards.MvcToolkit.Core.Blocks
+namespace Lizards.MvcToolkit.Core.Startup
 {
+  using Lamar;
   using Microsoft.AspNetCore.Builder;
   using Microsoft.AspNetCore.Hosting;
   using Microsoft.Extensions.Configuration;
-  using Microsoft.Extensions.DependencyInjection;
 
   public abstract class ConfigurationBlockBase : IConfigurationBlock
   {
@@ -18,7 +18,7 @@ namespace Lizards.MvcToolkit.Core.Blocks
 
       this.Configure();
       host.ASP.Add((app, env) => this.ConfigureApp(app, env));
-      host.Services.Add(services => this.ConfigureServices(services));
+      host.Services.Add(this.ConfigureServices);
     }
 
     protected virtual void Configure()
@@ -29,7 +29,7 @@ namespace Lizards.MvcToolkit.Core.Blocks
     {
     }
 
-    protected virtual void ConfigureServices(IServiceCollection services)
+    protected virtual void ConfigureServices(ServiceRegistry services)
     {
     }
   }

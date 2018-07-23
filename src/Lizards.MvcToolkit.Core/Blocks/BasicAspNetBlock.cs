@@ -2,12 +2,10 @@ namespace Lizards.MvcToolkit.Core.Blocks
 {
   using System;
   using System.Collections.Generic;
-  using System.Linq;
   using Lizards.MvcToolkit.Core.Blocks.Defaults;
+  using Lizards.MvcToolkit.Core.Startup;
   using Microsoft.AspNetCore.Builder;
-  using Microsoft.AspNetCore.Hosting;
   using Microsoft.AspNetCore.Routing;
-  using Microsoft.Extensions.Configuration;
 
   /// <summary>A defaukt implementation of Basic ASP.NET configuration</summary>
   /// <seealso cref="Lizards.MvcToolkit.Core.Blocks.IConfigurationBlock" />

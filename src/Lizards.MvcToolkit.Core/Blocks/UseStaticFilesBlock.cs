@@ -1,5 +1,6 @@
 namespace Lizards.MvcToolkit.Core.Blocks.Defaults
 {
+  using Lizards.MvcToolkit.Core.Startup;
   using Microsoft.AspNetCore.Builder;
   using Microsoft.AspNetCore.Hosting;
 

@@ -5,6 +5,7 @@ namespace Lizards.MvcToolkit.Core.Blocks.Defaults
   using System.Reflection;
   using Lizards.Data.CQRS;
   using Lizards.Data.CQRS.DataAccess;
+  using Lizards.MvcToolkit.Core.Startup;
   using Microsoft.AspNetCore.Builder;
   using Microsoft.AspNetCore.Hosting;
   using Microsoft.Extensions.DependencyInjection;
@@ -12,6 +13,7 @@ namespace Lizards.MvcToolkit.Core.Blocks.Defaults
   /// <summary>
   /// Automatic registration of all CQRS required items
   /// </summary>
+  /// <seealso cref="Lizards.MvcToolkit.Core.Startup.ConfigurationBlockWithOptionBase{System.Collections.Generic.IEnumerable{System.String}}" />
   public sealed class CQRSBlock : ConfigurationBlockWithOptionBase<IEnumerable<string>>
   {
     public CQRSBlock(params string[] assembliesNames)

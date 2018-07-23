@@ -2,11 +2,13 @@ namespace Lizards.MvcToolkit.Core.Blocks.Defaults
 {
   using System;
   using System.Net.Http;
+  using Lamar;
+  using Lizards.MvcToolkit.Core.Startup;
   using Microsoft.Extensions.DependencyInjection;
 
   public sealed class HttpClientFactoryBlock : ConfigurationBlockBase
   {
-    private readonly Action<IServiceCollection> configureHttpClientFactory;
+    private readonly Action<ServiceRegistry> configureHttpClientFactory;
 
     public HttpClientFactoryBlock()
       : this(services => services.AddHttpClient())
@@ -33,7 +35,7 @@ namespace Lizards.MvcToolkit.Core.Blocks.Defaults
       this.configureHttpClientFactory = configureHttpClientFactory;
     }
 
-    protected override void ConfigureServices(IServiceCollection services)
+    protected override void ConfigureServices(ServiceRegistry services)
       => this.configureHttpClientFactory(services);
   }
 }

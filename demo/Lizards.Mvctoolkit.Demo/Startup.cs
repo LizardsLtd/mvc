@@ -1,8 +1,8 @@
 namespace Lizards.Mvctoolkit.Demo
 {
-  using Lizards.Mvctoolkit.Demo.Services;
   using Lizards.MvcToolkit.Core.Blocks;
   using Lizards.MvcToolkit.Core.Blocks.Defaults;
+  using Lizards.MvcToolkit.Core.Startup;
   using Microsoft.AspNetCore.Hosting;
   using Microsoft.Extensions.Configuration;
 
@@ -24,7 +24,7 @@ namespace Lizards.Mvctoolkit.Demo
     {
       this.ApplyDefault(new BasicAspNetBlock(this.ExceptionHandlingRoute));
       this.ApplyDefault(new CQRSBlock("Lizards.Mvctoolkit.Demo"));
-      this.ApplyDefault<RegisterServiceBlock<IService, Service>>();
+      this.ApplyDefault<LamarServiceRegistryBlock<IocRegistry>>();
       this.ApplyDefault<HttpClientFactoryBlock>();
     }
 

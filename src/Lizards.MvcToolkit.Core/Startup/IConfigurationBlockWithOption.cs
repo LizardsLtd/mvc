@@ -1,4 +1,4 @@
-namespace Lizards.MvcToolkit.Core.Blocks
+namespace Lizards.MvcToolkit.Core.Startup
 {
   public interface IConfigurationBlockWithOption<TConfiguration> : IConfigurationBlock
   {

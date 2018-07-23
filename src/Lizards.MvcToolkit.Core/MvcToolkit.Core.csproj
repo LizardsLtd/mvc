@@ -1,9 +1,9 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <Description>ASP.NET Core MVC implementation.</Description>
-    <Copyright>Lizards  2016 - 2017</Copyright>
+    <Copyright>Lizzards  2016 - 2018</Copyright>
     <AssemblyTitle>MVC</AssemblyTitle>
-    <Version>0.39.0</Version>
+    <Version>0.40.0</Version>
     <WarningsAsErrors>true</WarningsAsErrors>
     <AssemblyName>Lizards.MvcToolkit.Core</AssemblyName>
     <ProjectGuid>549F923E-49E6-456D-B609-BD92B04A3AC2</ProjectGuid>
@@ -15,15 +15,16 @@
     <Authors>Szymon Sasin</Authors>
     <Company>Lizards</Company>
     <Product>ToolkitMVC</Product>
+    <PackageId>Lizzards.MvcToolkit.Core</PackageId>
   </PropertyGroup>
   <ItemGroup>
     <Content Include="..\..\stylecop.json" Link="stylecop.json" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="Lamar.Microsoft.DependencyInjection" Version="1.1.1" />
     <PackageReference Include="Lizards.Maybe" Version="0.3.3" />
     <PackageReference Include="Markdig" Version="0.15.1" />
     <PackageReference Include="Microsoft.AspNetCore.Diagnostics" Version="2.1.1" />
-    <PackageReference Include="Microsoft.AspNetCore.Hosting.Abstractions" Version="2.1.1" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.1.1" />
     <PackageReference Include="Microsoft.AspNetCore.SpaServices" Version="2.1.1" />
     <PackageReference Include="Microsoft.AspNetCore.StaticFiles" Version="2.1.1" />
@@ -31,6 +32,5 @@
     <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="2.1.1" />
     <PackageReference Include="Microsoft.Extensions.Http" Version="2.1.1" />
     <PackageReference Include="NLog" Version="4.5.6" />
-    <PackageReference Include="SimpleInjector.Integration.AspNetCore.Mvc" Version="4.3.1" />
   </ItemGroup>
 </Project>

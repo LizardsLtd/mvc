@@ -2,13 +2,12 @@ namespace Lizards.MvcToolkit.Core.Blocks
 {
   using System;
   using System.Collections.Generic;
-  using System.Linq;
   using Lizards.MvcToolkit.Core.Blocks.Defaults;
+  using Lizards.MvcToolkit.Core.Startup;
   using Microsoft.AspNetCore.Builder;
   using Microsoft.AspNetCore.Hosting;
   using Microsoft.AspNetCore.Routing;
   using Microsoft.AspNetCore.SpaServices.Webpack;
-  using Microsoft.Extensions.Configuration;
 
   public sealed class WebpackBlock : IConfigurationBlock
   {

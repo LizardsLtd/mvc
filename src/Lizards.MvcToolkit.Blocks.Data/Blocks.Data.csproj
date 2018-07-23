@@ -3,15 +3,16 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp2.0</TargetFramework>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>0.39.0</Version>
+    <Version>0.40.0</Version>
     <Authors>Szymon Sasin</Authors>
     <Company>Lizards</Company>
     <Product>Lizards MvcToolkit</Product>
     <Description />
-    <PackageId>Lizards.MvcToolkit.Blocks.Data</PackageId>
+    <PackageId>Lizzards.MvcToolkit.Blocks.Data</PackageId>
     <AssemblyName>Lizards.MvcToolkit.Blocks.Data</AssemblyName>
     <RootNamespace>Lizards.MvcToolkit.Blocks..Data</RootNamespace>
     <ProjectGuid>5B7CC7DD-7878-4FBB-9FD4-965A406538F6</ProjectGuid>
+    <Copyright>Lizzards  2016 - 2018</Copyright>
   </PropertyGroup>
 
   <ItemGroup>
