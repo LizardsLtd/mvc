@@ -4,7 +4,6 @@ namespace Lizards.MvcToolkit.Core.Startup
   using Microsoft.AspNetCore.Builder;
   using Microsoft.AspNetCore.Hosting;
   using Microsoft.Extensions.Configuration;
-  using Microsoft.Extensions.DependencyInjection;
 
   public abstract class ConfigurationBlockWithOptionBase<TOption> : IConfigurationBlockWithOption<TOption>
   {
@@ -32,7 +31,7 @@ namespace Lizards.MvcToolkit.Core.Startup
 
       this.Configure();
       host.ASP.Add((app, env) => this.ConfigureApp(app, env, this.Options));
-      host.Services.Add(services => this.ConfigureServices(services, this.Options));
+      this.ConfigureServices(host.Services, this.Options);
     }
 
     protected virtual void Configure()
@@ -43,7 +42,7 @@ namespace Lizards.MvcToolkit.Core.Startup
     {
     }
 
-    protected virtual void ConfigureServices(IServiceCollection services, TOption options)
+    protected virtual void ConfigureServices(ServicesConfigurator services, TOption options)
     {
     }
   }

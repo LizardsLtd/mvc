@@ -12,6 +12,10 @@ namespace Lizards.MvcToolkit.Core.Startup
             where TModelBinder : IModelBinder, new()
         => options.AddModelBinderProvider(new ModelBinderProvider<TBindedType, TModelBinder>());
 
+    public static Configurator<MvcOptions> AddModelBinderProvider<TModelBInderProvider>(this Configurator<MvcOptions> options)
+            where TModelBInderProvider : IModelBinderProvider, new()
+        => options.Add(option => option.ModelBinderProviders.Insert(0, new TModelBInderProvider()));
+
     public static Configurator<MvcOptions> AddModelBinderProvider(
             this Configurator<MvcOptions> options,
             IModelBinderProvider provider)

@@ -1,6 +1,7 @@
 namespace Lizards.Mvctoolkit.Demo
 {
   using Lizards.MvcToolkit.Core.Blocks;
+  using Lizards.MvcToolkit.Core.Blocks.Data;
   using Lizards.MvcToolkit.Core.Blocks.Defaults;
   using Lizards.MvcToolkit.Core.Startup;
   using Microsoft.AspNetCore.Hosting;
@@ -22,10 +23,11 @@ namespace Lizards.Mvctoolkit.Demo
     public DemoStartup(IHostingEnvironment env, IConfiguration configuration)
       : base(env, configuration)
     {
-      this.ApplyDefault(new BasicAspNetBlock(this.ExceptionHandlingRoute));
-      this.ApplyDefault(new CQRSBlock("Lizards.Mvctoolkit.Demo"));
-      this.ApplyDefault<LamarServiceRegistryBlock<IocRegistry>>();
-      this.ApplyDefault<HttpClientFactoryBlock>();
+      this.Apply(new BasicAspNetBlock(this.ExceptionHandlingRoute));
+      this.Apply<CQRSBlock>();
+      this.Apply<LamarServiceRegistryBlock<IocRegistry>>();
+      this.Apply<HttpClientFactoryBlock>();
+      this.Apply(new AssembliesScanList("Lizards.Mvctoolkit.Demo"));
     }
 
     /// <summary>Gets the exception handling route.</summary>

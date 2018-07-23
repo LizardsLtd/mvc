@@ -1,9 +1,5 @@
-namespace Lizards.MvcToolkit.Core.Blocks.Defaults
+namespace Lizards.MvcToolkit.Core.Blocks.Data
 {
-  using System.Collections.Generic;
-  using System.Linq;
-  using System.Reflection;
-  using Lizards.Data.CQRS;
   using Lizards.Data.CQRS.DataAccess;
   using Lizards.MvcToolkit.Core.Startup;
   using Microsoft.AspNetCore.Builder;
@@ -13,53 +9,18 @@ namespace Lizards.MvcToolkit.Core.Blocks.Defaults
   /// <summary>
   /// Automatic registration of all CQRS required items
   /// </summary>
-  /// <seealso cref="Lizards.MvcToolkit.Core.Startup.ConfigurationBlockWithOptionBase{System.Collections.Generic.IEnumerable{System.String}}" />
-  public sealed class CQRSBlock : ConfigurationBlockWithOptionBase<IEnumerable<string>>
+  public sealed class CQRSBlock : ConfigurationBlockBase
   {
-    public CQRSBlock(params string[] assembliesNames)
-        : base(assembliesNames) { }
-
-    protected override void ConfigureApp(IApplicationBuilder app, IHostingEnvironment env, IEnumerable<string> assembliesNames)
+    protected override void ConfigureApp(IApplicationBuilder app, IHostingEnvironment env)
         => app
             .ApplicationServices
             .GetService<IDataContextInitialiser>()
             ?.Initialise()
             ?.Wait();
 
-    protected override void ConfigureServices(IServiceCollection services, IEnumerable<string> assembliesNames)
+    protected override void ConfigureServices(ServicesConfigurator config)
     {
-      assembliesNames
-          .Select(assemblyName => Assembly.Load(new AssemblyName(assemblyName)))
-          .ToList()
-          .ForEach(assembly => this.AutomaticDetection(services, assembly));
+      config.AddConvention(new CqrsConvention());
     }
-
-    private void AutomaticDetection(IServiceCollection services, Assembly assembly)
-        => services
-            .DiscoverImplementation()
-                .ForAssembly(assembly)
-                .IncludeClassesOnly()
-                .ForTypesImplementingInterface<IDataContext>()
-                .AddAsInterface<IDataContext>()
-            .DiscoverImplementation()
-                .ForAssembly(assembly)
-                .IncludeClassesOnly()
-                .ForTypesImplementingInterface<IDataContextInitialiser>()
-                .AddAsInterface<IDataContextInitialiser>()
-            .DiscoverImplementation()
-                .ForAssembly(assembly)
-                .IncludeClassesOnly()
-                .ForTypesImplementingInterface(typeof(ICommandHandler))
-                .AddAsInterface<ICommandHandler>()
-            .DiscoverImplementation()
-                .ForAssembly(assembly)
-                .IncludeClassesOnly()
-                .ForTypesImplementingInterface<IsQuery>()
-                .AsSelf()
-            .DiscoverImplementation()
-                .ForAssembly(assembly)
-                .IncludeClassesOnly()
-                .ForTypesImplementingInterface<IStory>()
-                .AsImplementedInterfaces();
   }
 }
