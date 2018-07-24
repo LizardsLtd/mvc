@@ -3,6 +3,7 @@ namespace Lizards.MvcToolkit.Core.Blocks
   using System;
   using System.Collections.Generic;
   using Lizards.MvcToolkit.Core.Blocks.Defaults;
+  using Lizards.MvcToolkit.Core.ModelBinder;
   using Lizards.MvcToolkit.Core.Startup;
   using Microsoft.AspNetCore.Builder;
   using Microsoft.AspNetCore.Routing;
@@ -35,6 +36,7 @@ namespace Lizards.MvcToolkit.Core.Blocks
     {
       host.Apply<FeaturesBlock>();
       host.Apply<UseStaticFilesBlock>();
+      host.Apply<ModelBinderWithCustomProviderBlock<ImmutableModelBinderProvider>>();
       host.Apply(new ExceptionHandlingBlock(this.exceptionHandlingRoute));
       host.Apply(new MvcRouteConfigurationBlock(this.GetRoutes()));
     }

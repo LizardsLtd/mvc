@@ -9,8 +9,8 @@ namespace Lizards.MvcToolkit.Core.Startup
   {
     public MvcConfig()
     {
-      Options = new Configurator<MvcOptions>();
-      Routes = new Configurator<IRouteBuilder>();
+      this.Options = new Configurator<MvcOptions>();
+      this.Routes = new Configurator<IRouteBuilder>();
     }
 
     public Configurator<MvcOptions> Options { get; }
@@ -19,9 +19,9 @@ namespace Lizards.MvcToolkit.Core.Startup
 
     internal void AddMvc(IServiceCollection services)
     {
-      var mvcBuilder = services
-          .AddMvc(CreateMvcOptions)
-          .AddViewLocalization();
+      services
+        .AddMvc(CreateMvcOptions)
+        .AddViewLocalization();
     }
 
     internal void Use(IApplicationBuilder app)
