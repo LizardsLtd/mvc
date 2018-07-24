@@ -4,6 +4,7 @@ namespace Lizards.MvcToolkit.Core.Startup
   using System.Collections.Generic;
   using Lamar;
   using Lamar.Scanning.Conventions;
+  using Microsoft.Extensions.DependencyInjection;
 
   public sealed class ServicesConfigurator
   {
@@ -18,13 +19,14 @@ namespace Lizards.MvcToolkit.Core.Startup
       this.AssembliesForScan = new List<string>();
     }
 
-    private ServiceRegistry ServiceRegistry { get; }
-
     public void Add<TCustomRegistry>()
         where TCustomRegistry : ServiceRegistry, new()
       => this.services.Add(serviceRegistry => serviceRegistry.IncludeRegistry<TCustomRegistry>());
 
     public void Add(Action<ServiceRegistry> registryUpdateAction)
+      => this.services.Add(registryUpdateAction);
+
+    public void Add(Action<IServiceCollection> registryUpdateAction)
       => this.services.Add(registryUpdateAction);
 
     public void AddAssemblyForScan(string assemblyName)
