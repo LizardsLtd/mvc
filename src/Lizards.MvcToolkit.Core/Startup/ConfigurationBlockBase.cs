@@ -1,6 +1,5 @@
 namespace Lizards.MvcToolkit.Core.Startup
 {
-  using Lamar;
   using Microsoft.AspNetCore.Builder;
   using Microsoft.AspNetCore.Hosting;
   using Microsoft.Extensions.Configuration;
@@ -18,7 +17,7 @@ namespace Lizards.MvcToolkit.Core.Startup
 
       this.Configure();
       host.ASP.Add((app, env) => this.ConfigureApp(app, env));
-      host.Services.Add(this.ConfigureServices);
+      this.ConfigureServices(host.Services);
     }
 
     protected virtual void Configure()
@@ -29,7 +28,7 @@ namespace Lizards.MvcToolkit.Core.Startup
     {
     }
 
-    protected virtual void ConfigureServices(ServiceRegistry services)
+    protected virtual void ConfigureServices(ServicesConfigurator config)
     {
     }
   }

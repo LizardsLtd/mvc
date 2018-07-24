@@ -31,7 +31,7 @@ namespace Lizards.MvcToolkit.Core.Blocks.Defaults
       this.configureHttpClientFactory = configureHttpClientFactory;
     }
 
-    protected override void ConfigureServices(ServiceRegistry services)
-      => this.configureHttpClientFactory(services);
+    protected override void ConfigureServices(ServicesConfigurator config)
+      => config.Add(this.configureHttpClientFactory);
   }
 }

@@ -30,6 +30,7 @@ namespace Lizards.MvcToolkit.Core.Startup
     {
       services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
       this.startupConfiguration.Services.Use(services);
+      this.startupConfiguration.Services.AutoScan(services);
     }
 
     public void Configure(IApplicationBuilder app)
@@ -38,13 +39,15 @@ namespace Lizards.MvcToolkit.Core.Startup
       this.startupConfiguration.MVC.Use(app);
     }
 
-    public void ApplyDefault<TDefault>()
+    public Startup Apply<TDefault>()
            where TDefault : IConfigurationBlock, new()
-       => this.ApplyDefault(new TDefault());
+       => this.Apply(new TDefault());
 
-    public void ApplyDefault(IConfigurationBlock @default)
+    public Startup Apply(IConfigurationBlock @default)
     {
       this.startupConfiguration.Apply(@default);
+
+      return this;
     }
 
     protected virtual void AddConfigurationBuilderDetails(ConfigurationBuilder provider)
