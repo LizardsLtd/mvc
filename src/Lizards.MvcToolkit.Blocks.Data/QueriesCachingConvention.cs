@@ -5,6 +5,7 @@ namespace Lizzards.MvcToolkit.Blocks.Data
   using Lamar.Scanning;
   using Lamar.Scanning.Conventions;
   using Lizzards.Data.Cache;
+  using Lizzards.Data.CQRS;
   using Microsoft.Extensions.DependencyInjection;
 
   public sealed class QueriesCachingConvention : IRegistrationConvention

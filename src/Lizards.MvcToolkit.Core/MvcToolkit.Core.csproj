@@ -22,7 +22,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Lamar.Microsoft.DependencyInjection" Version="1.1.1" />
-    <PackageReference Include="Lizards.Maybe" Version="0.3.3" />
+    <PackageReference Include="Lizzards.Maybe" Version="0.3.3" />
     <PackageReference Include="Markdig" Version="0.15.1" />
     <PackageReference Include="Microsoft.AspNetCore.Diagnostics" Version="2.1.1" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.1.1" />
