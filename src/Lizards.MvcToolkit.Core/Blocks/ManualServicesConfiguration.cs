@@ -3,11 +3,10 @@ namespace Lizards.MvcToolkit.Core.Blocks
   using System;
   using Lamar;
   using Lizards.MvcToolkit.Core.Startup;
-  using Microsoft.Extensions.DependencyInjection;
 
   public sealed class ManualServicesConfiguration : ConfigurationBlockBase
   {
-    private readonly Action<IServiceCollection> manaualConfigureService;
+    private readonly Action<ServiceRegistry> manaualConfigureService;
 
     public ManualServicesConfiguration(Action<ServiceRegistry> manaualConfigureService)
     {
