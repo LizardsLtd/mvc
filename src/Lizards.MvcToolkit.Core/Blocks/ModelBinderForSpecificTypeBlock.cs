@@ -1,6 +1,6 @@
-namespace Lizards.MvcToolkit.Core.Blocks.Defaults
+namespace Lizzards.MvcToolkit.Core.Blocks.Defaults
 {
-  using Lizards.MvcToolkit.Core.Startup;
+  using Lizzards.MvcToolkit.Core.Startup;
   using Microsoft.AspNetCore.Mvc.ModelBinding;
 
   public sealed class ModelBinderBlock<TBindedType, TModelBinder> : IConfigurationBlock

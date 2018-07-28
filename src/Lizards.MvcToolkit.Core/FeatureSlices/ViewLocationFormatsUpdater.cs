@@ -1,4 +1,4 @@
-namespace Lizards.MvcToolkit.Core.FeatureSlices
+namespace Lizzards.MvcToolkit.Core.FeatureSlices
 {
   using Microsoft.AspNetCore.Mvc.Razor;
 

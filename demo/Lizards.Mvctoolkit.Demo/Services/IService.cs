@@ -1,4 +1,4 @@
-namespace Lizards.Mvctoolkit.Demo.Services
+namespace Lizzards.Mvctoolkit.Demo.Services
 {
   public interface IService
   {

@@ -1,6 +1,6 @@
-namespace Lizards.MvcToolkit.Core.Startup
+namespace Lizzards.MvcToolkit.Core.Startup
 {
-  using Lizards.MvcToolkit.Core.ModelBinder;
+  using Lizzards.MvcToolkit.Core.ModelBinder;
   using Microsoft.AspNetCore.Mvc;
   using Microsoft.AspNetCore.Mvc.ModelBinding;
   using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;

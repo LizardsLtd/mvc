@@ -1,7 +1,7 @@
-namespace Lizards.MvcToolkit.Core.Blocks.Defaults
+namespace Lizzards.MvcToolkit.Core.Blocks.Defaults
 {
-  using Lizards.MvcToolkit.Core.FeatureSlices;
-  using Lizards.MvcToolkit.Core.Startup;
+  using Lizzards.MvcToolkit.Core.FeatureSlices;
+  using Lizzards.MvcToolkit.Core.Startup;
 
   public sealed class FeaturesBlock : IConfigurationBlock
   {

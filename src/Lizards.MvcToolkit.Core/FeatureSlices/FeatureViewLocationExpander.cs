@@ -1,4 +1,4 @@
-namespace Lizards.MvcToolkit.Core.FeatureSlices
+namespace Lizzards.MvcToolkit.Core.FeatureSlices
 {
   using System.Collections.Generic;
   using Microsoft.AspNetCore.Mvc.Controllers;

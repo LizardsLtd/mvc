@@ -1,9 +1,9 @@
-namespace Lizards.MvcToolkit.Core.Blocks.Defaults
+namespace Lizzards.MvcToolkit.Core.Blocks.Defaults
 {
   using System;
   using System.Net.Http;
   using Lamar;
-  using Lizards.MvcToolkit.Core.Startup;
+  using Lizzards.MvcToolkit.Core.Startup;
   using Microsoft.Extensions.DependencyInjection;
 
   public sealed class HttpClientFactoryBlock : ConfigurationBlockBase

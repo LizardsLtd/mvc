@@ -1,4 +1,4 @@
-﻿namespace Lizards.MvcToolkit.Core
+﻿namespace Lizzards.MvcToolkit.Core
 {
     using System;
 

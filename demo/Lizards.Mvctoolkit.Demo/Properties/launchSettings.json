@@ -15,7 +15,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "Lizards.Mvctoolkit.Demo": {
+    "Lizzards.Mvctoolkit.Demo": {
       "commandName": "Project",
       "launchBrowser": true,
       "environmentVariables": {

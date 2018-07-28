@@ -1,4 +1,4 @@
-﻿namespace Lizards.MvcToolkit.Core.ModelBinder
+﻿namespace Lizzards.MvcToolkit.Core.ModelBinder
 {
   using System.ComponentModel;
   using System.Linq;

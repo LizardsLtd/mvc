@@ -1,15 +1,15 @@
-namespace Lizards.MvcToolkit.Core.Blocks
+namespace Lizzards.MvcToolkit.Core.Blocks
 {
   using System;
   using System.Collections.Generic;
-  using Lizards.MvcToolkit.Core.Blocks.Defaults;
-  using Lizards.MvcToolkit.Core.ModelBinder;
-  using Lizards.MvcToolkit.Core.Startup;
+  using Lizzards.MvcToolkit.Core.Blocks.Defaults;
+  using Lizzards.MvcToolkit.Core.ModelBinder;
+  using Lizzards.MvcToolkit.Core.Startup;
   using Microsoft.AspNetCore.Builder;
   using Microsoft.AspNetCore.Routing;
 
   /// <summary>A defaukt implementation of Basic ASP.NET configuration</summary>
-  /// <seealso cref="Lizards.MvcToolkit.Core.Blocks.IConfigurationBlock" />
+  /// <seealso cref="Lizzards.MvcToolkit.Core.Blocks.IConfigurationBlock" />
   public sealed class BasicAspNetBlock : IConfigurationBlock
   {
     /// <summary>

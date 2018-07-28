@@ -1,4 +1,4 @@
-namespace Lizards.MvcToolkit.Core.Startup
+namespace Lizzards.MvcToolkit.Core.Startup
 {
   using Microsoft.AspNetCore.Builder;
   using Microsoft.AspNetCore.Mvc;

@@ -1,4 +1,4 @@
-namespace Lizards.Mvctoolkit.Demo
+namespace Lizzards.Mvctoolkit.Demo
 {
   using Lamar.Microsoft.DependencyInjection;
   using Microsoft.AspNetCore;

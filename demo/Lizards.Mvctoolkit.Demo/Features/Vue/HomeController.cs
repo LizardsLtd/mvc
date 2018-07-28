@@ -1,4 +1,4 @@
-namespace Lizards.MvcToolkit.Demo.Features.Vue
+namespace Lizzards.MvcToolkit.Demo.Features.Vue
 {
   using System.Diagnostics;
   using Microsoft.AspNetCore.Http;

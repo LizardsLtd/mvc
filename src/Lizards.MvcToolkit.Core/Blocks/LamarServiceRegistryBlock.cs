@@ -1,7 +1,7 @@
-namespace Lizards.MvcToolkit.Core.Blocks
+namespace Lizzards.MvcToolkit.Core.Blocks
 {
   using Lamar;
-  using Lizards.MvcToolkit.Core.Startup;
+  using Lizzards.MvcToolkit.Core.Startup;
 
   public sealed class LamarServiceRegistryBlock<TCustomRegistry> : IConfigurationBlock
         where TCustomRegistry : ServiceRegistry, new()

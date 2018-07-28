@@ -1,9 +1,9 @@
-namespace Lizards.MvcToolkit.Core.Blocks
+namespace Lizzards.MvcToolkit.Core.Blocks
 {
   using System;
   using System.Collections.Generic;
-  using Lizards.MvcToolkit.Core.Blocks.Defaults;
-  using Lizards.MvcToolkit.Core.Startup;
+  using Lizzards.MvcToolkit.Core.Blocks.Defaults;
+  using Lizzards.MvcToolkit.Core.Startup;
   using Microsoft.AspNetCore.Builder;
   using Microsoft.AspNetCore.Hosting;
   using Microsoft.AspNetCore.Routing;

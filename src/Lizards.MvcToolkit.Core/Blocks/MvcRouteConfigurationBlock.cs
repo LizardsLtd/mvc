@@ -1,9 +1,9 @@
-namespace Lizards.MvcToolkit.Core.Blocks.Defaults
+namespace Lizzards.MvcToolkit.Core.Blocks.Defaults
 {
   using System;
   using System.Collections.Generic;
   using System.Linq;
-  using Lizards.MvcToolkit.Core.Startup;
+  using Lizzards.MvcToolkit.Core.Startup;
   using Microsoft.AspNetCore.Routing;
 
   public sealed class MvcRouteConfigurationBlock : IConfigurationBlockWithOption<IEnumerable<Action<IRouteBuilder>>>

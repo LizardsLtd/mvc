@@ -1,4 +1,4 @@
-namespace Lizards.MvcToolkit.Core.Blocks.Data
+namespace Lizzards.MvcToolkit.Core.Blocks.Data
 {
   using System;
   using System.Collections.Generic;
@@ -15,6 +15,11 @@ namespace Lizards.MvcToolkit.Core.Blocks.Data
     public LoadAllChildTypesConvertion()
     {
       this.AddToService = ServiceCollectionServiceExtensions.AddTransient;
+    }
+
+    public LoadAllChildTypesConvertion(Func<IServiceCollection, Type, Type, IServiceCollection> addToService)
+    {
+      this.AddToService = addToService;
     }
 
     public void ScanTypes(TypeSet types, ServiceRegistry services)

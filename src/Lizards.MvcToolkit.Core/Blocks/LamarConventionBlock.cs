@@ -1,9 +1,9 @@
-namespace Lizards.MvcToolkit.Core.Blocks
+namespace Lizzards.MvcToolkit.Core.Blocks
 {
   using System.Collections.Generic;
   using System.Linq;
   using Lamar.Scanning.Conventions;
-  using Lizards.MvcToolkit.Core.Startup;
+  using Lizzards.MvcToolkit.Core.Startup;
 
   public sealed class LamarConventionBlock : IConfigurationBlock
   {

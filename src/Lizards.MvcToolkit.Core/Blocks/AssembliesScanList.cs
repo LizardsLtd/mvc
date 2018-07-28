@@ -1,6 +1,6 @@
-namespace Lizards.MvcToolkit.Core.Blocks
+namespace Lizzards.MvcToolkit.Core.Blocks
 {
-  using Lizards.MvcToolkit.Core.Startup;
+  using Lizzards.MvcToolkit.Core.Startup;
 
   public sealed class AssembliesScanList : ConfigurationBlockBase
   {

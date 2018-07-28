@@ -1,4 +1,4 @@
-namespace Lizards.MvcToolkit.Core.Startup
+namespace Lizzards.MvcToolkit.Core.Startup
 {
   using System.Collections.Generic;
   using Microsoft.AspNetCore.Builder;

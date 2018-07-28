@@ -1,7 +1,6 @@
-namespace Lizards.MvcToolkit.Core.Blocks.Data
+namespace Lizzards.MvcToolkit.Core.Blocks.Data
 {
-  using Lizards.Data.CQRS.DataAccess;
-  using Lizards.MvcToolkit.Core.Startup;
+  using Lizzards.MvcToolkit.Core.Startup;
   using Microsoft.AspNetCore.Builder;
   using Microsoft.AspNetCore.Hosting;
   using Microsoft.Extensions.DependencyInjection;

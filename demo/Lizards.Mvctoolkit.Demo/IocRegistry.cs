@@ -1,7 +1,7 @@
-namespace Lizards.Mvctoolkit.Demo
+namespace Lizzards.Mvctoolkit.Demo
 {
   using Lamar;
-  using Lizards.Mvctoolkit.Demo.Services;
+  using Lizzards.Mvctoolkit.Demo.Services;
 
   /// <summary>
   /// Defaukt registry for demo project.
