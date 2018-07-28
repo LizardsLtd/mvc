@@ -3,7 +3,7 @@
     <Description>ASP.NET Core MVC implementation.</Description>
     <Copyright>Lizzards  2016 - 2018</Copyright>
     <AssemblyTitle>MVC</AssemblyTitle>
-    <Version>0.43.0</Version>
+    <Version>0.44.0</Version>
     <WarningsAsErrors>true</WarningsAsErrors>
     <AssemblyName>Lizards.MvcToolkit.Core</AssemblyName>
     <ProjectGuid>549F923E-49E6-456D-B609-BD92B04A3AC2</ProjectGuid>
