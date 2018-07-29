@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>0.45.0</Version>
+    <Version>0.45.1</Version>
     <Authors>Szymon Sasin</Authors>
     <Company>Lizards</Company>
     <Product>Lizards MvcToolkit</Product>
