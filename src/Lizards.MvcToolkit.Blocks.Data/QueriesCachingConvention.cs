@@ -1,6 +1,7 @@
 namespace Lizzards.MvcToolkit.Blocks.Data
 {
   using System;
+  using System.Linq;
   using Lamar;
   using Lamar.Scanning;
   using Lamar.Scanning.Conventions;
@@ -24,6 +25,13 @@ namespace Lizzards.MvcToolkit.Blocks.Data
 
     public void ScanTypes(TypeSet types, ServiceRegistry services)
     {
+      var isQUery = typeof(IsQuery);
+      types
+        .FindTypes(TypeClassification.Concretes)
+        .Where(type => isQUery.IsAssignableFrom(type))
+        .ToList()
+        .ForEach(x => x.GetInterfaces().ToList().ForEach(@interface => this.AddToService(services, @interface, x));
+
       services.For(typeof(IQuery<>)).DecorateAllWith(typeof(CachedQueryDecorator<>));
       services.For(typeof(IQuery<,>)).DecorateAllWith(typeof(CachedQueryDecorator<,>));
       services.For(typeof(IQuery<,,>)).DecorateAllWith(typeof(CachedQueryDecorator<,,>));
