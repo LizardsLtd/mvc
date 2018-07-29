@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <AssemblyName>Lizzards.AspNet.Api</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="Blocks\SwaggerBlock.fs" />
+    <Compile Include="Library.fs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Lizards.MvcToolkit.Core\MvcToolkit.Core.csproj" />
+  </ItemGroup>
+</Project>

@@ -16,13 +16,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{36D4F041-A
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MvcToolkit.Core", "src\Lizards.MvcToolkit.Core\MvcToolkit.Core.csproj", "{549F923E-49E6-456D-B609-BD92B04A3AC2}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Blocks.Data", "src\Lizards.MvcToolkit.Blocks.Data\Blocks.Data.csproj", "{5B7CC7DD-7878-4FBB-9FD4-965A406538F6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Data", "src\Lizards.MvcToolkit.Blocks.Data\Data.csproj", "{5B7CC7DD-7878-4FBB-9FD4-965A406538F6}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "demo", "demo", "{A9E1DD2E-AA13-486C-BD2F-3F20D983A3BC}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lizards.Mvctoolkit.Demo", "demo\Lizards.Mvctoolkit.Demo\Lizards.Mvctoolkit.Demo.csproj", "{CAFF517A-D331-4185-9501-E04E1AFEA86C}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Lizzards.AspNet.Test.Unit", "test\Lizzards.AspNet.Test.Unit\Lizzards.AspNet.Test.Unit.fsproj", "{995D7DAC-79FC-4BE4-AC43-43EF079E3E5B}"
+Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "Lizzards.AspNet.Test.Unit", "test\Lizzards.AspNet.Test.Unit\Lizzards.AspNet.Test.Unit.fsproj", "{995D7DAC-79FC-4BE4-AC43-43EF079E3E5B}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Api", "src\Lizzards.AspNet.Api\Api.fsproj", "{B599EF10-65D0-4B25-BE03-F50A17D32824}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -82,6 +84,18 @@ Global
 		{995D7DAC-79FC-4BE4-AC43-43EF079E3E5B}.Release|x64.Build.0 = Release|Any CPU
 		{995D7DAC-79FC-4BE4-AC43-43EF079E3E5B}.Release|x86.ActiveCfg = Release|Any CPU
 		{995D7DAC-79FC-4BE4-AC43-43EF079E3E5B}.Release|x86.Build.0 = Release|Any CPU
+		{B599EF10-65D0-4B25-BE03-F50A17D32824}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B599EF10-65D0-4B25-BE03-F50A17D32824}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B599EF10-65D0-4B25-BE03-F50A17D32824}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{B599EF10-65D0-4B25-BE03-F50A17D32824}.Debug|x64.Build.0 = Debug|Any CPU
+		{B599EF10-65D0-4B25-BE03-F50A17D32824}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{B599EF10-65D0-4B25-BE03-F50A17D32824}.Debug|x86.Build.0 = Debug|Any CPU
+		{B599EF10-65D0-4B25-BE03-F50A17D32824}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B599EF10-65D0-4B25-BE03-F50A17D32824}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B599EF10-65D0-4B25-BE03-F50A17D32824}.Release|x64.ActiveCfg = Release|Any CPU
+		{B599EF10-65D0-4B25-BE03-F50A17D32824}.Release|x64.Build.0 = Release|Any CPU
+		{B599EF10-65D0-4B25-BE03-F50A17D32824}.Release|x86.ActiveCfg = Release|Any CPU
+		{B599EF10-65D0-4B25-BE03-F50A17D32824}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -91,6 +105,7 @@ Global
 		{5B7CC7DD-7878-4FBB-9FD4-965A406538F6} = {893DD448-96BF-4115-94D6-E85E6466F614}
 		{CAFF517A-D331-4185-9501-E04E1AFEA86C} = {A9E1DD2E-AA13-486C-BD2F-3F20D983A3BC}
 		{995D7DAC-79FC-4BE4-AC43-43EF079E3E5B} = {36D4F041-A871-48E0-89FC-9B47E9A71383}
+		{B599EF10-65D0-4B25-BE03-F50A17D32824} = {893DD448-96BF-4115-94D6-E85E6466F614}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1ED67F7D-1272-45A2-A550-68A214A3899C}
