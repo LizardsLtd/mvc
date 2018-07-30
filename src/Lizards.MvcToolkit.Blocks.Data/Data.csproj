@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>0.46.0</Version>
+    <Version>0.46.1</Version>
     <Authors>Szymon Sasin</Authors>
     <Company>Lizards</Company>
     <Product>Lizards MvcToolkit</Product>
@@ -25,7 +25,7 @@
 
   <ItemGroup>
     <PackageReference Include="Lizzards.Data" Version="0.26.0" />
-    <PackageReference Include="Lizzards.Data.Cache" Version="0.2.1" />
+    <PackageReference Include="Lizzards.Data.Cache" Version="0.2.2" />
     <PackageReference Include="NLog" Version="4.5.7" />
   </ItemGroup>
 
